@@ -46,4 +46,4 @@ The version of `dplyr` that is currently on CRAN is version 0.3.0.2, and require
 
 All other packages can be installed from CRAN.
 
-The scripts that handle the French upper chamber require a PostgreSQL installation: see the [`README`](https://github.com/briatte/parlement/blob/master/README.md) file of the [`parlement`](https://github.com/briatte/parlement) repository for further details.
+The scripts that handle the French upper chamber require a [PostgreSQL](https://www.postgresql.org/) installation: see the [`README`](https://github.com/briatte/parlement/blob/master/README.md) file of the [`parlement`](https://github.com/briatte/parlement) repository for further details.

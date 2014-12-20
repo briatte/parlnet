@@ -44,4 +44,6 @@ See the [`parlviz`](https://github.com/briattte/parlviz) repository for the code
 The `ggnet_save` function uses code from the `ggnet` function, by [Moritz Marbach](https://github.com/sumtxt) and myself. The complete function is published in the [`GGally`](https://github.com/ggobi/ggally) package 
 by [Barret Schloerke](https://github.com/schloerke).
 
+The `makeCxn` and `fetchQuery` PostgreSQL query functions found in [`parlement/functions-pgsql.r`](https://github.com/briatte/parlement/blob/master/functions-pgsql.r) and used to get data from the French upper chamber are by [Erik Gregory](https://anrprogrammer.wordpress.com/2013/07/27/easier-database-querying-with-r/).
+
 The `str_clean` and `str_space` text cleaning functions are lightweight remixes of the `scrubber` and `Trim` functions found in the very rich [`qdap`](https://github.com/trinker/qdap/) package by [Tyler Rinker](https://github.com/trinker/).
