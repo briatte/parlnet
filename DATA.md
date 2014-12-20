@@ -1,8 +1,10 @@
-The following sources were used to build the networks:
+# SOURCES
 
 * bills and sponsors are scraped from official parliament websites or from their open data portals
 * party colors are approximate matches to those found on Wikipedia (several languages)
 * party [Left/Right scores](http://parlgov.org/stable/documentation/party-position.html) are copied from [ParlGov stable](http://parlgov.org/stable/) (12/10) or from [ParlGov beta](http://dev.parlgov.org/)
+
+# VARIABLES
 
 Each network carries the following attributes:
 
@@ -29,4 +31,4 @@ Each network carries the following attributes:
 	- `modularity_maximized`: [maximized modularity](http://papers.ssrn.com/sol3/papers.cfm?abstract_id=1437055 "Waugh et al. 2012"), using [Walktrap](http://arxiv.org/abs/physics/0512106 "Pons and Latapy 2005") over random steps 1-50
 	- `modularity_ratio`: empirical / maximized modularity ratio
 
-It is also technically feasable to build and plot the networks as bipartite graphs, with bills as the primary mode and sponsors as the secondary mode, by using sparse matrixes and only slightly different visualization code. The bills, however, have very little attributes of their own (only a few chambers provide keywords or legislative outcomes).
+It is also technically feasable to build and plot the networks as bipartite graphs, with bills as the primary mode and sponsors as the secondary mode, by using [sparse matrixes](http://solomonmessing.wordpress.com/2012/09/30/working-with-bipartiteaffiliation-network-data-in-r/) and only slightly different visualization code. The bills, however, have very little attributes of their own (only a few chambers provide keywords or legislative outcomes).
