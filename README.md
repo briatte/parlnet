@@ -36,8 +36,8 @@ The `README` files in each folder contain further technical notes for replicatio
 
 Each repository depends on:
 
-- [`ggplot2`](https://github.com/hadley/ggplot2), 
-[`plyr`](https://github.com/hadley/plyr) and 
+- [`dplyr`](https://github.com/hadley/dplyr), 
+[`ggplot2`](https://github.com/hadley/ggplot2) and 
 [`stringr`](https://github.com/hadley/stringr), 
 by [Hadley Wickham](https://github.com/hadley)
 - [`grid`](https://www.stat.auckland.ac.nz/~paul/grid/grid.html), 
@@ -61,7 +61,15 @@ The code also occasionally calls:
 - the [`jsonlite`](https://github.com/jeroenooms/jsonlite) package by [Jeroen Ooms](https://github.com/jeroenooms), to parse JSON data, and 
 - the [`RPostgreSQL`](http://cran.r-project.org/web/packages/RPostgreSQL/) package by [Joe Conway](http://www.joeconway.com/) and others, to import RPostgreSQL data
 
-Most packages require R ≥ 2.14.0, `RPostgreSQL` requires R ≥ 2.9.0, and R ≥ 3.0.3 is required to avoid a small bug that affects the conversion of French dates.
+The code should be executed in R ≥ 3.0.2. Although most packages require R ≥ 2.14.0, `RPostgreSQL` (used for the French upper chamber) requires R ≥ 2.9.0, and R ≥ 3.0.3 is required to avoid a [small bug](https://github.com/hadley/lubridate/issues/194) that affects the conversion of French dates.
+
+The code further requires to install the development version of `dplyr` with the `devtools` package:
+
+```{r}
+devtools::install_github("hadley/dplyr") 
+```
+
+The version of `dplyr` that is currently on CRAN is version 0.3.0.2, and requires R ≥ 3.1. It contains a [bug](https://github.com/hadley/dplyr/issues/783) that will cause a fatal error in the scraper for the Belgian lower chamber. The current development version `dplyr` is version 0.3.0.9000 and requires only R ≥ 3.0.2.
 
 The `ggnet_save` function uses code from the `ggnet` function, by [Moritz Marbach](https://github.com/sumtxt) and myself. The complete function is published in the [`GGally`](https://github.com/ggobi/ggally) package 
 by [Barret Schloerke](https://github.com/schloerke). 
@@ -117,7 +125,7 @@ Known limitations of the current version are:
 	* some but not all scripts contain exception lists to skip over the (little amount of) errors
 	* some errors are permanent: using `while` would create infinite loops
 * **Some parts of the code are sluggish, or at least could run much faster.**
-	* `dplyr` can replace `plyr` everywhere; this would bump software dependency to R ≥ 3.1
+	* bills and sponsors could be stored as SQL tables instead of CSV files
 	* adjacency matrixes are probably faster than edge lists as network constructors
 * **Some variables do not use standardised names or have many missing values.**
 	* variables with high missing counts:
