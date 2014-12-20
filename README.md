@@ -70,13 +70,13 @@ The `str_clean` and `str_space` text cleaning functions are lightweight remixes 
 
 # DATA
 
-All networks are [collapsed one-mode projections](http://solomonmessing.wordpress.com/2012/09/30/working-with-bipartiteaffiliation-network-data-in-r/) of bill-sponsor bipartite graphs, built from the following sources:
+The following sources were used to build the networks:
 
-* Bills and sponsors are scraped from official parliament websites or from their open data portals.
-* Party colors are approximate matches to those found on Wikipedia (several languages).
-* Party [Left/Right scores](http://parlgov.org/stable/documentation/party-position.html) are from [ParlGov stable](http://parlgov.org/stable/) (12/10) or from [ParlGov beta](http://dev.parlgov.org/).
+* bills and sponsors are scraped from official parliament websites or from their open data portals
+* party colors are approximate matches to those found on Wikipedia (several languages)
+* party [Left/Right scores](http://parlgov.org/stable/documentation/party-position.html) are from [ParlGov stable](http://parlgov.org/stable/) (12/10) or from [ParlGov beta](http://dev.parlgov.org/)
 
-The directed and valued cosponsorship networks produced from that data carry the following attributes:
+Each network carries the following attributes:
 
 - Vertex-level attributes
 	- Socio-demographics
@@ -90,14 +90,14 @@ The directed and valued cosponsorship networks produced from that data carry the
 		- `lr`: Left/Right party score
 	- Centrality measures
 		- `n_au` and `n_co`: raw counts of bills authored and cosponsored
-		- `degree`, `distance` and `clustering`: [weighted local measures](http://toreopsahl.com/2010/04/21/article-node-centrality-in-weighted-networks-generalizing-degree-and-shortest-paths/ "Opsahl 2010"), using each weighting scheme
+		- `degree`, `distance` and `clustering`: [weighted local measures](http://toreopsahl.com/2010/04/21/article-node-centrality-in-weighted-networks-generalizing-degree-and-shortest-paths/ "Opsahl 2010")
 - Edge-level attributes:
 	- `raw` are “raw edge counts”, i.e. the number of cosponsorship ties between two sponsors
 	- `nfw` are “[Newman](http://www-personal.umich.edu/~mejn/papers/016132.pdf "Newman 2001")-[Fowler](http://jhfowler.ucsd.edu/best_connected_congressperson.pdf "Fowler 2006") weights”, i.e. the weighted quantity of bills cosponsored
 	- `gsw` are “[Gross-Shalizi](http://www.latinodecisions.com/files/4013/3840/2978/Gross-Kirkland-Shalizi_Multilevel-Cosponsorship_PolAnlys-submission.pdf "Gross, Kirkland and Shalizi 2012") weights”, i.e. the weighted propensity to cosponsor
 - Network-level attributes
-	- `degree`, `distance` and `clustering`: [weighted global measures](http://toreopsahl.com/2010/04/21/article-node-centrality-in-weighted-networks-generalizing-degree-and-shortest-paths/ "Opsahl 2010"), using each weighting scheme
-	- `modularity`: empirical party-based [modularity](http://arxiv.org/abs/physics/0602124 "Newman 2006"), using each weighting scheme
+	- `degree`, `distance` and `clustering`: [weighted global measures](http://toreopsahl.com/2010/04/21/article-node-centrality-in-weighted-networks-generalizing-degree-and-shortest-paths/ "Opsahl 2010")
+	- `modularity`: empirical party-based [modularity](http://arxiv.org/abs/physics/0602124 "Newman 2006")
 	- `modularity_maximized`: [maximized modularity](http://papers.ssrn.com/sol3/papers.cfm?abstract_id=1437055 "Waugh et al. 2012"), using [Walktrap](http://arxiv.org/abs/physics/0512106 "Pons and Latapy 2005") over random steps 1-50
 	- `modularity_ratio`: empirical / maximized modularity ratio
 
