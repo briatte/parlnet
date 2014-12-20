@@ -61,7 +61,7 @@ The code also occasionally calls:
 - the [`jsonlite`](https://github.com/jeroenooms/jsonlite) package by [Jeroen Ooms](https://github.com/jeroenooms), to parse JSON data, and 
 - the [`RPostgreSQL`](http://cran.r-project.org/web/packages/RPostgreSQL/) package by [Joe Conway](http://www.joeconway.com/) and others, to import RPostgreSQL data
 
-Most packages require R ≥ 2.14.0, and `RPostgreSQL` requires R ≥ 2.9.0. Although R ≥ 3.0 is not technically required to run the code, it still seems like a good idea to go with it.
+Most packages require R ≥ 2.14.0, `RPostgreSQL` requires R ≥ 2.9.0, and R ≥ 3.0.3 is required to avoid a small bug that affects the conversion of French dates.
 
 The `ggnet_save` function uses code from the `ggnet` function, by [Moritz Marbach](https://github.com/sumtxt) and myself. The complete function is published in the [`GGally`](https://github.com/ggobi/ggally) package 
 by [Barret Schloerke](https://github.com/schloerke). 
@@ -73,7 +73,7 @@ The `str_clean` and `str_space` text cleaning functions are lightweight remixes 
 All networks are [collapsed one-mode projections](http://solomonmessing.wordpress.com/2012/09/30/working-with-bipartiteaffiliation-network-data-in-r/) of bill-sponsor bipartite graphs, built from the following sources:
 
 * Bills and sponsors are scraped from official parliament websites or from their open data portals.
-* Party colors are approximate matches to those found on Wikipedia (checked in several languages).
+* Party colors are approximate matches to those found on Wikipedia (several languages).
 * Party [Left/Right scores](http://parlgov.org/stable/documentation/party-position.html) are from [ParlGov stable](http://parlgov.org/stable/) (12/10) or from [ParlGov beta](http://dev.parlgov.org/).
 
 The directed and valued cosponsorship networks produced from that data carry the following attributes:
@@ -89,16 +89,19 @@ The directed and valued cosponsorship networks produced from that data carry the
 		- `party` and `partyname`: simplified political party/group abbreviation and full name
 		- `lr`: Left/Right party score
 	- Centrality measures
-		- `degree`, `distance` and `clustering`: [weighted local measures](http://toreopsahl.com/2010/04/21/article-node-centrality-in-weighted-networks-generalizing-degree-and-shortest-paths/ "Opsahl 2010"), using all three weighting schemes
+		- `n_au` and `n_co`: raw counts of bills authored and cosponsored
+		- `degree`, `distance` and `clustering`: [weighted local measures](http://toreopsahl.com/2010/04/21/article-node-centrality-in-weighted-networks-generalizing-degree-and-shortest-paths/ "Opsahl 2010"), using each weighting scheme
 - Edge-level attributes:
 	- `raw` are “raw edge counts”, i.e. the number of cosponsorship ties between two sponsors
 	- `nfw` are “[Newman](http://www-personal.umich.edu/~mejn/papers/016132.pdf "Newman 2001")-[Fowler](http://jhfowler.ucsd.edu/best_connected_congressperson.pdf "Fowler 2006") weights”, i.e. the weighted quantity of bills cosponsored
 	- `gsw` are “[Gross-Shalizi](http://www.latinodecisions.com/files/4013/3840/2978/Gross-Kirkland-Shalizi_Multilevel-Cosponsorship_PolAnlys-submission.pdf "Gross, Kirkland and Shalizi 2012") weights”, i.e. the weighted propensity to cosponsor
 - Network-level attributes
-	- `degree`, `distance` and `clustering`: [weighted global measures](http://toreopsahl.com/2010/04/21/article-node-centrality-in-weighted-networks-generalizing-degree-and-shortest-paths/ "Opsahl 2010"), using all three weighting schemes
-	- `modularity`: empirical party-based [modularity](http://arxiv.org/abs/physics/0602124 "Newman 2006"), computed against all three kinds of edge weights
+	- `degree`, `distance` and `clustering`: [weighted global measures](http://toreopsahl.com/2010/04/21/article-node-centrality-in-weighted-networks-generalizing-degree-and-shortest-paths/ "Opsahl 2010"), using each weighting scheme
+	- `modularity`: empirical party-based [modularity](http://arxiv.org/abs/physics/0602124 "Newman 2006"), using each weighting scheme
 	- `modularity_maximized`: [maximized modularity](http://papers.ssrn.com/sol3/papers.cfm?abstract_id=1437055 "Waugh et al. 2012"), using [Walktrap](http://arxiv.org/abs/physics/0512106 "Pons and Latapy 2005") over random steps 1-50
 	- `modularity_ratio`: empirical / maximized modularity ratio
+
+It is also technically feasable to build and plot the networks as bipartite graphs, with bills as the primary mode and sponsors as the secondary mode, by using sparse matrixes and only slightly different visualization code. The bills, however, have very little attributes of their own (only a few chambers provide keywords or legislative outcomes).
 
 # ISSUES
 
@@ -107,19 +110,22 @@ Please report bugs or suggestions for improvements as [issues](issues).
 Known limitations of the current version are:
 
 * **No self-updating mechanism: the data has to be refreshed manually.**
-	* this step would probably require recoding all scrapers in Python to run them through ScraperWiki
-	* this would only improve ongoing legislatures, and would still require manual updates after website upgrades
+	* would probably require recoding all scrapers in Python for [ScraperWiki](https://scraperwiki.com/)
+	* would improve data collection for ongoing legislatures only
+	* would still require manual updates after website upgrades
 * **Network errors in download loops require to rerun some of the scripts.**
-	* some but not all scripts contain exception lists of URLs to skip over the (little amount of) errors
-	* some errors are permanent: the loops cannot be trapped in (what would be infinite) `while` statements
+	* some but not all scripts contain exception lists to skip over the (little amount of) errors
+	* some errors are permanent: using `while` would create infinite loops
 * **Some parts of the code are sluggish, or at least could run much faster.**
-	* `dplyr` could replace `plyr` in virtually every script; this would bump software dependency to R ≥ 3.1
-	* the networks are built from edge lists; the same results might be reached faster from adjacency matrixes
+	* `dplyr` can replace `plyr` everywhere; this would bump software dependency to R ≥ 3.1
+	* adjacency matrixes are probably faster than edge lists as network constructors
 * **Some variables do not use standardised names or have many missing values.**
-	* variables with high missing counts: `born` and `constituency`
-	* variables that are missing entirely: `committee` (complex to observe comparatively) and electoral candidacy
-
-It is also technically feasable to plot the networks as bipartite graphs, with bills as the primary mode and sponsors as the secondary mode, by using sparse matrixes and only slightly different visualization code. The bills, however, have very little attributes of their own (only a few chambers provide keywords or legislative outcomes).
+	* variables with high missing counts:
+		* `born` (especially for upper house sponsors)
+		* `constituency` (also often hard to standardise)
+	* variables that are missing entirely:
+		* `committee` (complex to observe comparatively)
+		* anythnig to do with electoral candidacy (unobservable)
 
 # THANKS
 
