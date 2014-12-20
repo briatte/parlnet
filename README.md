@@ -1,32 +1,34 @@
 This repository contains [R](http://www.r-project.org/) code to build and plot legislative cosponsorship networks in 18 parliamentary chambers from 14 European countries:
 
-- [Austria](nationalrat) (lower/national chamber only)
-- [Belgium](belparl) (both chambers)
-- [Bulgaria](bgparl)
-- [Czech Republic](poslanecka) (lower chamber only)
-- [Denmark](folketinget)
-- [Finland](eduskunta)
-- [France](parlement) (both chambers)
-- [Iceland](althing)
-- [Italy](parlamento) (both chambers)
-- [Lithuania](seimas)
-- [Norway](stortinget)
-- [Romania](parlamentul) (both chambers)
-- [Sweden](riksdag)
-- [Switzerland](swparl) (lower/national chamber only)
+| | | | |
+|:----------------------------------------------|:----------------------------------------------:|:--------------------------------------------------:|:-------------------------------------:|
+| **Austria** (lower/national chamber only)     | [code](https://github.com/briatte/nationalrat) | [plots](http://briatte.org/nationalrat/plots.html) | [viz](http://briatte.org/nationalrat) |
+| **Belgium** (both chambers)                   | [code](https://github.com/briatte/belparl)     | [plots](http://briatte.org/belparl/plots.html)     | [viz](http://briatte.org/belparl)     |
+| **Bulgaria**                                  | [code](https://github.com/briatte/bgparl)      | [plots](http://briatte.org/bgparl/plots.html)      | [viz](http://briatte.org/bgparl)      |
+| **Czech Republic** (lower chamber only)       | [code](https://github.com/briatte/poslanecka)  | [plots](http://briatte.org/poslanecka/plots.html)  | [viz](http://briatte.org/poslanecka)  |
+| **Denmark**                                   | [code](https://github.com/briatte/folketinget) | [plots](http://briatte.org/folketinget/plots.html) | [viz](http://briatte.org/folketinget) |
+| **Finland**                                   | [code](https://github.com/briatte/eduskunta)   | [plots](http://briatte.org/eduskunta/plots.html)   | [viz](http://briatte.org/eduskunta)   |
+| **France** (both chambers)                    | [code](https://github.com/briatte/parlement)   | [plots](http://briatte.org/parlement/plots.html)   | [viz](http://briatte.org/parlement)   |
+| **Iceland**                                   | [code](https://github.com/briatte/althing)     | [plots](http://briatte.org/althing/plots.html)     | [viz](http://briatte.org/althing)     |
+| **Italy** (both chambers)                     | [code](https://github.com/briatte/parlamento)  | [plots](http://briatte.org/parlamento/plots.html)  | [viz](http://briatte.org/parlamento)  |
+| **Lithuania**                                 | [code](https://github.com/briatte/seimas)      | [plots](http://briatte.org/seimas/plots.html)      | [viz](http://briatte.org/seimas)      |
+| **Norway**                                    | [code](https://github.com/briatte/stortinget)  | [plots](http://briatte.org/stortinget/plots.html)  | [viz](http://briatte.org/stortinget)  |
+| **Romania** (both chambers)                   | [code](https://github.com/briatte/parlamentul) | [plots](http://briatte.org/parlamentul/plots.html) | [viz](http://briatte.org/parlamentul) |
+| **Sweden**                                    | [code](https://github.com/briatte/riksdag)     | [plots](http://briatte.org/riksdag/plots.html)     | [viz](http://briatte.org/riksdag)     |
+| **Switzerland** (lower/national chamber only) | [code](https://github.com/briatte/swparl)      | [plots](http://briatte.org/swparl/plots.html)      | [viz](http://briatte.org/swparl)      |
 
-See the [`parlviz`](https://github.com/briatte/parlviz) repository for [interactive visualizations](http://briatte.org/) of the networks.
+See the [`parlviz`](https://github.com/briattte/parlviz) repository for additional code to run the [interactive visualizations](http://briatte.org/).
 
 # HOWTO
 
 Each folder contains:
 
-- `make.r` -- main entry point
-- `load.r` -- package loader
-- `parties.r` -- party colors and [ParlGov Left/Right scores](http://parlgov.org/stable/documentation/party-position.html)
-- `functions.r` -- network functions
-- `data.r` -- scrapers for bills and sponsors
-- `build.r` -- network building, plotting and export routines
+- `make.r` – main entry point
+- `load.r` – package loader
+- `parties.r` – party information
+- `functions.r` – network functions
+- `data.r` – scrapers for bills and sponsors
+- `build.r` – network building routines
 
 The `README` files in each folder contain further technical notes for replication purposes.
 
@@ -68,26 +70,35 @@ The `str_clean` and `str_space` text cleaning functions are lightweight remixes 
 
 # DATA
 
+All networks are [collapsed one-mode projections](http://solomonmessing.wordpress.com/2012/09/30/working-with-bipartiteaffiliation-network-data-in-r/) of bill-sponsor bipartite graphs, built from the following sources:
+
 * Bills and sponsors are scraped from official parliament websites or from their open data portals.
-* Party colors are approximate matches to those found on Wikipedia.
-* Left/Right scores are from [ParlGov stable](http://parlgov.org/stable/) (12/10) or from [ParlGov beta](http://dev.parlgov.org/).
+* Party colors are approximate matches to those found on Wikipedia (checked in several languages).
+* Party [Left/Right scores](http://parlgov.org/stable/documentation/party-position.html) are from [ParlGov stable](http://parlgov.org/stable/) (12/10) or from [ParlGov beta](http://dev.parlgov.org/).
 
-The cosponsorship networks produced from that data have several kinds of attributes:
+The directed and valued cosponsorship networks produced from that data carry the following attributes:
 
-- vertex-level attributes:
-	- socio-demographics -- age, sex and seniority, measured as years spent in the same chamber before the legislature started
-	- descriptive information -- shortened URLs to the profile and photo of the sponsor, and constituency when it was available
-	- party information -- simplified political party/group abbreviation and ParlGov party-level Left/Right score, from 0 to 10
-	- centrality measures -- weighted degree, distance and clustering ([Opsahl 2010](http://toreopsahl.com/2010/04/21/article-node-centrality-in-weighted-networks-generalizing-degree-and-shortest-paths/)), computed against all three kinds of edge weights
-- edge-level attributes:
-	- "raw edge counts", i.e. the number of cosponsorship ties between two sponsors
-	- "Newman-Fowler weights", i.e. weighted quantity of bills cosponsored ([Newman 2001](http://www-personal.umich.edu/~mejn/papers/016132.pdf), [Fowler 2006](http://jhfowler.ucsd.edu/best_connected_congressperson.pdf))
-	- "Gross-Shalizi weights", i.e. weighted propensity to cosponsor ([Gross, Kirkland and Shalizi 2012](http://www.latinodecisions.com/files/4013/3840/2978/Gross-Kirkland-Shalizi_Multilevel-Cosponsorship_PolAnlys-submission.pdf))
-- network-level attributes:
-	- empirical party-based modularity, computed against all three kinds of edge weights
-	- maximized modularity ([Waugh _et al._ 2012](http://papers.ssrn.com/sol3/papers.cfm?abstract_id=1437055)), using the Walktrap algorithm ([Pons and Latapy 2005](http://arxiv.org/abs/physics/0512106)) over random steps 1-50, as in [Waugh _et al._ 2009](http://arxiv.org/abs/0907.3509), Section 2.3
-
-See the working paper for further details on the network data.
+- Vertex-level attributes
+	- Socio-demographics
+		- `born` and `sex`: year of birth and gender
+		- `nyears`: seniority, i.e. years spent in the same chamber before the legislature started
+	- Descriptive information
+		- `url` and `photo`: shortened URLs to the profile and photo of the sponsor
+		- `constituency`: constituency, when it was available
+	- Party information
+		- `party` and `partyname`: simplified political party/group abbreviation and full name
+		- `lr`: Left/Right party score
+	- Centrality measures
+		- `degree`, `distance` and `clustering`: [weighted local measures](http://toreopsahl.com/2010/04/21/article-node-centrality-in-weighted-networks-generalizing-degree-and-shortest-paths/ "Opsahl 2010"), using all three weighting schemes
+- Edge-level attributes:
+	- `raw` are “raw edge counts”, i.e. the number of cosponsorship ties between two sponsors
+	- `nfw` are “[Newman](http://www-personal.umich.edu/~mejn/papers/016132.pdf "Newman 2001")-[Fowler](http://jhfowler.ucsd.edu/best_connected_congressperson.pdf "Fowler 2006") weights”, i.e. the weighted quantity of bills cosponsored
+	- `gsw` are “[Gross-Shalizi](http://www.latinodecisions.com/files/4013/3840/2978/Gross-Kirkland-Shalizi_Multilevel-Cosponsorship_PolAnlys-submission.pdf "Gross, Kirkland and Shalizi 2012") weights”, i.e. the weighted propensity to cosponsor
+- Network-level attributes
+	- `degree`, `distance` and `clustering`: [weighted global measures](http://toreopsahl.com/2010/04/21/article-node-centrality-in-weighted-networks-generalizing-degree-and-shortest-paths/ "Opsahl 2010"), using all three weighting schemes
+	- `modularity`: empirical party-based [modularity](http://arxiv.org/abs/physics/0602124 "Newman 2006"), computed against all three kinds of edge weights
+	- `modularity_maximized`: [maximized modularity](http://papers.ssrn.com/sol3/papers.cfm?abstract_id=1437055 "Waugh et al. 2012"), using [Walktrap](http://arxiv.org/abs/physics/0512106 "Pons and Latapy 2005") over random steps 1-50
+	- `modularity_ratio`: empirical / maximized modularity ratio
 
 # ISSUES
 
@@ -95,20 +106,20 @@ Please report bugs or suggestions for improvements as [issues](issues).
 
 Known limitations of the current version are:
 
-* no self-updating mechanism: the data has to be refreshed manually
-	* this step would probably require recoding all scrapers in Python to run them through ScraperWiki; good luck with that
-	* the effort would only improve ongoing legislatures, and would still require updating the code after website upgrades
-* network errors in download loops require to rerun some of the scripts
-	* some network errors are permanent: the loops cannot be trapped in (what would be infinite) `while` statements
-	* some but not all scripts contain exception lists of URLs to skip over the (little amount of) errors when they can be avoided
-* some parts of the code are sluggish, or at least could run much faster
-	* `dplyr` could be substituted to `plyr` in virtually every script; this would bump software dependency to R ≥ 3.1
-	* the networks are built from directed edge lists; the same results might be reached faster with adjacency matrixes
-* some variables do not use standardised names or have many missing values
-	* variables that could be improved: `born` (sometimes patchy) and `constituency` (would require standardising all names)
-	* variables that are missing entirely: `committee` (highly complex to observe comparatively) and electoral candidacy
+* **No self-updating mechanism: the data has to be refreshed manually.**
+	* this step would probably require recoding all scrapers in Python to run them through ScraperWiki
+	* this would only improve ongoing legislatures, and would still require manual updates after website upgrades
+* **Network errors in download loops require to rerun some of the scripts.**
+	* some but not all scripts contain exception lists of URLs to skip over the (little amount of) errors
+	* some errors are permanent: the loops cannot be trapped in (what would be infinite) `while` statements
+* **Some parts of the code are sluggish, or at least could run much faster.**
+	* `dplyr` could replace `plyr` in virtually every script; this would bump software dependency to R ≥ 3.1
+	* the networks are built from edge lists; the same results might be reached faster from adjacency matrixes
+* **Some variables do not use standardised names or have many missing values.**
+	* variables with high missing counts: `born` and `constituency`
+	* variables that are missing entirely: `committee` (complex to observe comparatively) and electoral candidacy
 
-It is also technically feasable to build the networks as bipartite graphs, with bills as the primary mode and sponsors as the secondary mode, by using sparse matrixes and slightly different visualization code. The bills, however, are very little attributes of their own (only a few chambers provide keywords or legislative outcomes).
+It is also technically feasable to plot the networks as bipartite graphs, with bills as the primary mode and sponsors as the secondary mode, by using sparse matrixes and only slightly different visualization code. The bills, however, have very little attributes of their own (only a few chambers provide keywords or legislative outcomes).
 
 # THANKS
 
