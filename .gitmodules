@@ -1,0 +1,42 @@
+[submodule "althing"]
+	path = althing
+	url = https://github.com/briatte/althing.git
+[submodule "belparl"]
+	path = belparl
+	url = https://github.com/briatte/belparl.git
+[submodule "bgparl"]
+	path = bgparl
+	url = https://github.com/briatte/bgparl.git
+[submodule "eduskunta"]
+	path = eduskunta
+	url = https://github.com/briatte/eduskunta.git
+[submodule "folketinget"]
+	path = folketinget
+	url = https://github.com/briatte/folketinget.git
+[submodule "nationalrat"]
+	path = nationalrat
+	url = https://github.com/briatte/nationalrat.git
+[submodule "parlamento"]
+	path = parlamento
+	url = https://github.com/briatte/parlamento.git
+[submodule "parlamentul"]
+	path = parlamentul
+	url = https://github.com/briatte/parlamentul.git
+[submodule "parlement"]
+	path = parlement
+	url = https://github.com/briatte/parlement.git
+[submodule "poslanecka"]
+	path = poslanecka
+	url = https://github.com/briatte/poslanecka.git
+[submodule "riksdag"]
+	path = riksdag
+	url = https://github.com/briatte/riksdag.git
+[submodule "stortinget"]
+	path = stortinget
+	url = https://github.com/briatte/stortinget.git
+[submodule "swparl"]
+	path = swparl
+	url = https://github.com/briatte/swparl.git
+[submodule "seimas"]
+	path = seimas
+	url = https://github.com/briatte/seimas.git
