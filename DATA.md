@@ -2,7 +2,7 @@
 
 * bills and sponsors are scraped from official parliament websites or from their open data portals
 * party colors are approximate matches to those found on Wikipedia (several languages)
-* party [Left/Right scores](http://parlgov.org/stable/documentation/party-position.html) are copied from [ParlGov stable](http://parlgov.org/stable/) (12/10) or from [ParlGov beta](http://dev.parlgov.org/)
+* party [Left/Right scores](http://www.parlgov.org/documentation/party-positions/) are copied from [ParlGov stable](http://www.parlgov.org/static/static-2014/stable/data.html) (12/10) or from [ParlGov beta](http://www.parlgov.org/)
 
 # VARIABLES
 
