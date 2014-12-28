@@ -16,6 +16,9 @@
 [submodule "nationalrat"]
 	path = nationalrat
 	url = https://github.com/briatte/nationalrat.git
+[submodule "orszaggyules"]
+	path = orszaggyules
+	url = https://github.com/briatte/orszaggyules.git
 [submodule "parlamento"]
 	path = parlamento
 	url = https://github.com/briatte/parlamento.git
