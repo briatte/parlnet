@@ -10,11 +10,12 @@ Each network carries the following attributes:
 
 - Vertex-level attributes
 	- Socio-demographics
-		- `born` and `sex`: year of birth and gender
+		- `born`: year of birth, when it was available
+		- `sex`: gender (sometimes imputed from names)
 		- `nyears`: seniority, i.e. years spent in the same chamber before the legislature started
 	- Descriptive information
 		- `url` and `photo`: shortened URLs to the profile and photo of the sponsor
-		- `constituency`: constituency, when it was available
+		- `constituency`: constituency, generally as the URL to the Wikipedia entry (see note)
 	- Party information
 		- `party` and `partyname`: simplified political party/group abbreviation and full name
 		- `lr`: Left/Right party score
@@ -30,5 +31,7 @@ Each network carries the following attributes:
 	- `modularity`: empirical party-based [modularity](http://arxiv.org/abs/physics/0602124 "Newman 2006")
 	- `modularity_maximized`: [maximized modularity](http://papers.ssrn.com/sol3/papers.cfm?abstract_id=1437055 "Waugh et al. 2012"), using [Walktrap](http://arxiv.org/abs/physics/0512106 "Pons and Latapy 2005") over random steps 1-50
 	- `modularity_ratio`: empirical / maximized modularity ratio
+
+Note -- there are no constituencies in the Belgian Senate, and Swiss constituencies are coded in multilingual French/German/Italian text instead of a link to a Wikipedia entry.
 
 It is also technically feasable to build and plot the networks as bipartite graphs, with bills as the primary mode and sponsors as the secondary mode, by using [sparse matrixes](http://solomonmessing.wordpress.com/2012/09/30/working-with-bipartiteaffiliation-network-data-in-r/) and only slightly different visualization code. The bills, however, have very little attributes of their own (only a few chambers provide keywords or legislative outcomes).

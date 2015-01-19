@@ -1,4 +1,4 @@
-This repository contains [R](http://www.r-project.org/) code to build and plot legislative cosponsorship networks in 18 parliamentary chambers from 14 European countries:
+This repository contains [R](http://www.r-project.org/) code to build and plot legislative cosponsorship networks in 19 parliamentary chambers from 15 European countries:
 
 | | | | |
 |:----------------------------------------------|:----------------------------------------------:|:--------------------------------------------------:|:-------------------------------------:|
