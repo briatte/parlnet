@@ -34,16 +34,33 @@ The code also occasionally calls:
 - the [`jsonlite`](https://github.com/jeroenooms/jsonlite) package by [Jeroen Ooms](https://github.com/jeroenooms), to parse JSON data, and 
 - the [`RPostgreSQL`](http://cran.r-project.org/web/packages/RPostgreSQL/) package by [Joe Conway](http://www.joeconway.com/) and others, to import RPostgreSQL data
 
-The code should be executed in R ≥ 3.0.3. Although most packages require R ≥ 2.14.0, `RPostgreSQL` requires R ≥ 2.9.0, and R ≥ 3.0.3 is required to avoid a [small bug](https://github.com/hadley/lubridate/issues/194) that affects the conversion of French dates.
+The code should be executed in R ≥ 3.0.3 (although most packages require R ≥ 2.14.0, `RPostgreSQL` requires R ≥ 2.9.0, `dplyr` requires R >= 3.0.2 and R ≥ 3.0.3 is required to avoid a [small bug](https://github.com/hadley/lubridate/issues/194) that affects the conversion of French dates).
 
-The code further requires to install the development version of `dplyr` with the `devtools` package:
-
-```{r}
-devtools::install_github("hadley/dplyr") 
-```
-
-The version of `dplyr` that is currently on CRAN is version 0.3.0.2, and requires R ≥ 3.1. It contains a [bug](https://github.com/hadley/dplyr/issues/783) that will cause a fatal error in the scraper for the Belgian lower chamber. The current development version `dplyr` is version 0.3.0.9000 and requires only R ≥ 3.0.2.
-
-All other packages can be installed from CRAN.
+All packages can be installed from CRAN.
 
 The scripts that handle the French upper chamber require a [PostgreSQL](https://www.postgresql.org/) installation: see the [`README`](https://github.com/briatte/parlement/blob/master/README.md) file of the [`parlement`](https://github.com/briatte/parlement) repository for further details.
+
+The session information after loading all required packages in R 3.1.2 on Mac OSX looks like this:
+
+```
+R version 3.1.2 (2014-10-31)
+Platform: x86_64-apple-darwin13.4.0 (64-bit)
+
+locale:
+[1] en_GB.UTF-8/en_GB.UTF-8/en_GB.UTF-8/C/en_GB.UTF-8/en_GB.UTF-8
+
+attached base packages:
+[1] grid      splines   stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+ [1] downloader_0.3  jsonlite_0.9.14 RPostgreSQL_0.4 DBI_0.3.1       ggmap_2.3       ggplot2_1.0.0   tnet_3.0.11    
+ [8] survival_2.37-7 rgexf_0.14.3.11 Rook_1.1-1      sna_2.3-2       network_1.11.3  igraph_0.7.1    XML_3.98-1.1   
+[15] stringr_0.6.2   dplyr_0.4.1    
+
+loaded via a namespace (and not attached):
+ [1] assertthat_0.1      bitops_1.0-6        brew_1.0-6          colorspace_1.2-4    digest_0.6.8       
+ [6] gtable_0.1.2        magrittr_1.5        mapproj_1.2-2       maps_2.3-9          MASS_7.3-37        
+[11] munsell_0.4.2       parallel_3.1.2      plyr_1.8.1          png_0.1-7           proto_0.3-10       
+[16] Rcpp_0.11.3         RCurl_1.95-4.5      reshape2_1.4.1      RgoogleMaps_1.2.0.6 rjson_0.2.15       
+[21] RJSONIO_1.3-0       scales_0.2.4        tools_3.1.2        
+```
