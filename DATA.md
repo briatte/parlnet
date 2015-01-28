@@ -33,6 +33,8 @@ Each network carries the following attributes:
 	- `modularity_maximized`: [maximized modularity](http://papers.ssrn.com/sol3/papers.cfm?abstract_id=1437055 "Waugh et al. 2012"), using [Walktrap](http://arxiv.org/abs/physics/0512106 "Pons and Latapy 2005") over random steps 1-50
 	- `modularity_ratio`: empirical / maximized modularity ratio
 
+Each network is also saved in undirected form, with the `committee` edge attribute indicating the number of parliamentary committees that list both sponsors as their members.
+
 Note -- exceptions to constituencies being coded as Wikipedia handles are:
 
 - there are no constituencies in the electoral system of the Belgian Senate

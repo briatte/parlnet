@@ -6,6 +6,7 @@ Each repository contains:
 - `functions.r` – network functions
 - `data.r` – scrapers for bills and sponsors
 - `build.r` – network building routines
+- `comm.r` – committee co-membership routine
 
 Each repository depends on:
 
