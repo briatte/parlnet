@@ -13,9 +13,7 @@ Known limitations of the current version are:
 	* bills and sponsors could be stored as SQL tables instead of CSV files
 	* adjacency matrixes are probably faster than edge lists as network constructors
 * **Some variables have many missing or unstandardised values.**
-	* variables with high missing counts:
-		* `born` (especially for upper house sponsors)
-		* `constituency` (hard to standardise)
-	* variables that are missing entirely:
-		* `committee` (complex to observe comparatively)
-		* anything to do with electoral candidacy (unobserved)
+	* the `born` variable occasionally has high missing counts in upper houses
+	* the `constituency` variable is not available in pre-redistricted Sweden
+	* the `committee` variable cannot be perfectly standardised
+	* anything to do with electoral candidacy is unobserved
