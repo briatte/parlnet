@@ -1,24 +1,22 @@
 This repository contains [R](http://www.r-project.org/) code to build and plot legislative cosponsorship networks in 19 parliamentary chambers from 15 European countries:
 
-| | | | |
+| Country / Chamber | | | |
 |:----------------------------------------------|:----------------------------------------------:|:--------------------------------------------------:|:-------------------------------------:|
-| **Austria** (lower/national chamber only)     | [code](https://github.com/briatte/nationalrat) | [plots](http://briatte.org/nationalrat/plots.html) | [viz](http://briatte.org/nationalrat) |
-| **Belgium** (both chambers)                   | [code](https://github.com/briatte/belparl)     | [plots](http://briatte.org/belparl/plots.html)     | [viz](http://briatte.org/belparl)     |
-| **Bulgaria**                                  | [code](https://github.com/briatte/bgparl)      | [plots](http://briatte.org/bgparl/plots.html)      | [viz](http://briatte.org/bgparl)      |
-| **Czech Republic** (lower chamber only)       | [code](https://github.com/briatte/poslanecka)  | [plots](http://briatte.org/poslanecka/plots.html)  | [viz](http://briatte.org/poslanecka)  |
-| **Denmark**                                   | [code](https://github.com/briatte/folketinget) | [plots](http://briatte.org/folketinget/plots.html) | [viz](http://briatte.org/folketinget) |
-| **Finland**                                   | [code](https://github.com/briatte/eduskunta)   | [plots](http://briatte.org/eduskunta/plots.html)   | [viz](http://briatte.org/eduskunta)   |
-| **France** (both chambers)                    | [code](https://github.com/briatte/parlement)   | [plots](http://briatte.org/parlement/plots.html)   | [viz](http://briatte.org/parlement)   |
-| **Hungary**                                   | [code](https://github.com/briatte/orszaggyules)| [plots](http://briatte.org/orszaggyules/plots.html)| [viz](http://briatte.org/orszaggyules)|
-| **Iceland**                                   | [code](https://github.com/briatte/althing)     | [plots](http://briatte.org/althing/plots.html)     | [viz](http://briatte.org/althing)     |
-| **Italy** (both chambers)                     | [code](https://github.com/briatte/parlamento)  | [plots](http://briatte.org/parlamento/plots.html)  | [viz](http://briatte.org/parlamento)  |
-| **Lithuania**                                 | [code](https://github.com/briatte/seimas)      | [plots](http://briatte.org/seimas/plots.html)      | [viz](http://briatte.org/seimas)      |
-| **Norway**                                    | [code](https://github.com/briatte/stortinget)  | [plots](http://briatte.org/stortinget/plots.html)  | [viz](http://briatte.org/stortinget)  |
-| **Romania** (both chambers)                   | [code](https://github.com/briatte/parlamentul) | [plots](http://briatte.org/parlamentul/plots.html) | [viz](http://briatte.org/parlamentul) |
-| **Sweden**                                    | [code](https://github.com/briatte/riksdag)     | [plots](http://briatte.org/riksdag/plots.html)     | [viz](http://briatte.org/riksdag)     |
-| **Switzerland** (lower/national chamber only) | [code](https://github.com/briatte/swparl)      | [plots](http://briatte.org/swparl/plots.html)      | [viz](http://briatte.org/swparl)      |
-
-See the [`parlviz`](https://github.com/briattte/parlviz) repository for the code that runs the [interactive visualizations](http://briatte.org/).
+| **Austria** (lower/national chamber only)     | [code](https://github.com/briatte/nationalrat) | [plots](http://f.briatte.org/parlviz/nationalrat/plots.html) | [viz](http://f.briatte.org/parlviz/nationalrat) |
+| **Belgium** (both chambers)                   | [code](https://github.com/briatte/belparl)     | [plots](http://f.briatte.org/parlviz/belparl/plots.html)     | [viz](http://f.briatte.org/parlviz/belparl)     |
+| **Bulgaria**                                  | [code](https://github.com/briatte/bgparl)      | [plots](http://f.briatte.org/parlviz/bgparl/plots.html)      | [viz](http://f.briatte.org/parlviz/bgparl)      |
+| **Czech Republic** (lower chamber only)       | [code](https://github.com/briatte/poslanecka)  | [plots](http://f.briatte.org/parlviz/poslanecka/plots.html)  | [viz](http://f.briatte.org/parlviz/poslanecka)  |
+| **Denmark**                                   | [code](https://github.com/briatte/folketinget) | [plots](http://f.briatte.org/parlviz/folketinget/plots.html) | [viz](http://f.briatte.org/parlviz/folketinget) |
+| **Finland**                                   | [code](https://github.com/briatte/eduskunta)   | [plots](http://f.briatte.org/parlviz/eduskunta/plots.html)   | [viz](http://f.briatte.org/parlviz/eduskunta)   |
+| **France** (both chambers)                    | [code](https://github.com/briatte/parlement)   | [plots](http://f.briatte.org/parlviz/parlement/plots.html)   | [viz](http://f.briatte.org/parlviz/parlement)   |
+| **Hungary**                                   | [code](https://github.com/briatte/orszaggyules)| [plots](http://f.briatte.org/parlviz/orszaggyules/plots.html)| [viz](http://f.briatte.org/parlviz/orszaggyules)|
+| **Iceland**                                   | [code](https://github.com/briatte/althing)     | [plots](http://f.briatte.org/parlviz/althing/plots.html)     | [viz](http://f.briatte.org/parlviz/althing)     |
+| **Italy** (both chambers)                     | [code](https://github.com/briatte/parlamento)  | [plots](http://f.briatte.org/parlviz/parlamento/plots.html)  | [viz](http://f.briatte.org/parlviz/parlamento)  |
+| **Lithuania**                                 | [code](https://github.com/briatte/seimas)      | [plots](http://f.briatte.org/parlviz/seimas/plots.html)      | [viz](http://f.briatte.org/parlviz/seimas)      |
+| **Norway**                                    | [code](https://github.com/briatte/stortinget)  | [plots](http://f.briatte.org/parlviz/stortinget/plots.html)  | [viz](http://f.briatte.org/parlviz/stortinget)  |
+| **Romania** (both chambers)                   | [code](https://github.com/briatte/parlamentul) | [plots](http://f.briatte.org/parlviz/parlamentul/plots.html) | [viz](http://f.briatte.org/parlviz/parlamentul) |
+| **Sweden**                                    | [code](https://github.com/briatte/riksdag)     | [plots](http://f.briatte.org/parlviz/riksdag/plots.html)     | [viz](http://f.briatte.org/parlviz/riksdag)     |
+| **Switzerland** (lower/national chamber only) | [code](https://github.com/briatte/swparl)      | [plots](http://f.briatte.org/parlviz/swparl/plots.html)      | [viz](http://f.briatte.org/parlviz/swparl)      |
 
 # DOCS
 
