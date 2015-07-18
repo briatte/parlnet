@@ -1,8 +1,4 @@
-# SOURCES
 
-* bills and sponsors are scraped from official parliament websites or from their open data portals
-* party colors are, as often as possible, approximate matches to those found on Wikipedia (several languages)
-* party [Left/Right scores](http://www.parlgov.org/documentation/party-positions/) are from [ParlGov stable](http://www.parlgov.org/static/static-2014/stable/data.html) (14/12) or [ParlGov beta](http://www.parlgov.org/)
 
 # VARIABLES
 
@@ -44,5 +40,3 @@ Note -- exceptions to constituencies being coded as Wikipedia handles are:
 Furthermore, due to a redistricting reform, many constituencies are missing in the Swedish data for years prior to 2002.
 
 * * *
-
-It is also technically feasable to build and plot the networks as bipartite graphs, with bills as the primary mode and sponsors as the secondary mode, by using [sparse matrixes](http://solomonmessing.wordpress.com/2012/09/30/working-with-bipartiteaffiliation-network-data-in-r/) and only slightly different visualization code. The bills, however, have very little attributes of their own (only a few chambers provide keywords or legislative outcomes).
