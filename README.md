@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.20821.svg)](http://dx.doi.org/10.5281/zenodo.20821)
+
 This repository contains [R](http://www.r-project.org/) code to build and plot legislative cosponsorship networks in 19 parliamentary chambers from 15 European countries:
 
 | Country / Chamber | | | | |
