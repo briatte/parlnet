@@ -54,7 +54,10 @@ The code also occasionally calls:
 
 - the [`downloader`](https://github.com/wch/downloader) package by [Winston Chang](github.com/wch), to download files from HTTPS links,
 - the [`ggmap`](https://github.com/dkahle/ggmap) package by [David Kahle](https://github.com/dkahle) and [Hadley Wickham](https://github.com/hadley), to geocode constituencies,
-- the [`jsonlite`](https://github.com/jeroenooms/jsonlite) package by [Jeroen Ooms](https://github.com/jeroenooms), to parse JSON data, and
+- the [`httr`](https://github.com/hadley/httr) package by [Hadley Wickham](https://github.com/hadley), to handle unusual HTTP calls,
+- the [`jsonlite`](https://github.com/jeroenooms/jsonlite) package by [Jeroen Ooms](https://github.com/jeroenooms), to parse JSON data,
+- the [`readr`](https://github.com/hadley/readr) package by [Hadley Wickham](https://github.com/hadley) and others, to speed up CSV input/output,
+- the [`rvest`](https://github.com/hadley/rvest) package by [Hadley Wickham](https://github.com/hadley), to simplify HTML parsing, and
 - the [`RPostgreSQL`](http://cran.r-project.org/web/packages/RPostgreSQL/) package by [Joe Conway](http://www.joeconway.com/) and others, to import PostgreSQL data
 
 All packages can be installed from [CRAN](https://cran.r-project.org/).
@@ -70,26 +73,26 @@ locale:
 [1] en_GB.UTF-8/en_GB.UTF-8/en_GB.UTF-8/C/en_GB.UTF-8/en_GB.UTF-8
 
 attached base packages:
-[1] grid      stats     graphics  grDevices utils     datasets  methods
-[8] base
+[1] grid      stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] downloader_0.4  jsonlite_0.9.16 RPostgreSQL_0.4 DBI_0.3.1
-[5] ggmap_2.4       ggplot2_1.0.1   tnet_3.0.11     survival_2.38-3
-[9] rgexf_0.15.3    Rook_1.1-1      sna_2.3-2       network_1.12.0
-[13] igraph_1.0.1    XML_3.98-1.3    stringr_1.0.0   dplyr_0.4.2
+ [1] downloader_0.4  jsonlite_0.9.16 RPostgreSQL_0.4 DBI_0.3.1      
+ [5] ggmap_2.4       rvest_0.2.0     readr_0.1.1     httr_1.0.0     
+ [9] ggplot2_1.0.1   tnet_3.0.11     survival_2.38-3 rgexf_0.15.3   
+[13] Rook_1.1-1      sna_2.3-2       network_1.12.0  igraph_1.0.1   
+[17] XML_3.98-1.3    stringr_1.0.0   dplyr_0.4.2    
 
 loaded via a namespace (and not attached):
-[1] Rcpp_0.11.6         plyr_1.8.3          tools_3.2.1
-[4] digest_0.6.8        gtable_0.1.2        lattice_0.20-33
-[7] png_0.1-7           mapproj_1.2-3       parallel_3.2.1
-[10] proto_0.3-10        RgoogleMaps_1.2.0.7 maps_2.3-10
-[13] R6_2.1.0            jpeg_0.1-8          RJSONIO_1.3-0
-[16] sp_1.1-1            reshape2_1.4.1      magrittr_1.5
-[19] scales_0.2.5        splines_3.2.1       MASS_7.3-43
-[22] assertthat_0.1      colorspace_1.2-6    geosphere_1.4-3
-[25] brew_1.0-6          stringi_0.5-5       munsell_0.4.2
-[28] rjson_0.2.15
+ [1] Rcpp_0.11.6         plyr_1.8.3          tools_3.2.1        
+ [4] digest_0.6.8        gtable_0.1.2        lattice_0.20-33    
+ [7] png_0.1-7           rstudioapi_0.3.1    mapproj_1.2-3      
+[10] parallel_3.2.1      proto_0.3-10        maps_2.3-10        
+[13] RgoogleMaps_1.2.0.7 R6_2.1.0            jpeg_0.1-8         
+[16] RJSONIO_1.3-0       sp_1.1-1            reshape2_1.4.1     
+[19] magrittr_1.5        scales_0.2.5        splines_3.2.1      
+[22] MASS_7.3-43         assertthat_0.1      colorspace_1.2-6   
+[25] geosphere_1.4-3     brew_1.0-6          stringi_0.5-5      
+[28] munsell_0.4.2       rjson_0.2.15
 ```
 
 # NOTES
