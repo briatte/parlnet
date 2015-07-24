@@ -38,21 +38,16 @@ Each repository depends on:
 by [Hadley Wickham](https://github.com/hadley)
 - [`grid`](https://www.stat.auckland.ac.nz/~paul/grid/grid.html),
 by [Paul Murrell](https://www.stat.auckland.ac.nz/~paul/) (distributed with R)
-- [`igraph`](https://github.com/igraph/igraph),
-by [Gabor Csardi](https://github.com/gaborcsardi) and others
 - [`network`](http://cran.r-project.org/web/packages/network/) and
 [`sna`](http://cran.r-project.org/web/packages/sna/),
 by [Carter T. Butts](http://erzuli.ss.uci.edu/~buttsc/) and others
 - [`rgexf`](http://bitbucket.org/gvegayon/rgexf),
 by [George Vega Yon](http://bitbucket.org/gvegayon/) and others
-- [`tnet`](http://cran.r-project.org/web/packages/tnet/),
-by [Tore Opsahl](http://toreopsahl.com/)
 - [`XML`](http://cran.r-project.org/web/packages/XML/),
 by [Duncan Temple Lang](http://www.stat.ucdavis.edu/~duncan/)
 
 The code also occasionally calls:
 
-- the [`downloader`](https://github.com/wch/downloader) package by [Winston Chang](github.com/wch), to download files from HTTPS links,
 - the [`ggmap`](https://github.com/dkahle/ggmap) package by [David Kahle](https://github.com/dkahle) and [Hadley Wickham](https://github.com/hadley), to geocode constituencies,
 - the [`httr`](https://github.com/hadley/httr) package by [Hadley Wickham](https://github.com/hadley), to handle unusual HTTP calls,
 - the [`jsonlite`](https://github.com/jeroenooms/jsonlite) package by [Jeroen Ooms](https://github.com/jeroenooms), to parse JSON data,
