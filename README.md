@@ -1,6 +1,6 @@
 [![DOI](https://zenodo.org/badge/15478/briatte/parlnet.svg)](https://zenodo.org/badge/latestdoi/15478/briatte/parlnet)
 
-This repository contains [R](http://www.r-project.org/) code to build and plot legislative cosponsorship networks in 20 parliamentary chambers from 15 European countries:
+This repository contains [R](http://www.r-project.org/) code to build and plot 117 legislative cosponsorship networks in 22 parliamentary chambers from 17 European countries:
 
 | Country / Chamber | | | | |
 |:----------------------------------------------|:----------------------------------------------:|:----------------------------------------------------------:|:------------------------------------------------------------:|:-----------------------------------------------:|
@@ -16,10 +16,13 @@ This repository contains [R](http://www.r-project.org/) code to build and plot l
 | **Italy** (both chambers)                     | [code](https://github.com/briatte/parlamento)  | [README](https://github.com/briatte/parlamento/README.md)  | [plots](http://f.briatte.org/parlviz/parlamento/plots.html)  | [viz](http://f.briatte.org/parlviz/parlamento)  |
 | **Lithuania**                                 | [code](https://github.com/briatte/seimas)      | [README](https://github.com/briatte/seimas/README.md)      | [plots](http://f.briatte.org/parlviz/seimas/plots.html)      | [viz](http://f.briatte.org/parlviz/seimas)      |
 | **Norway**                                    | [code](https://github.com/briatte/stortinget)  | [README](https://github.com/briatte/stortinget/README.md)  | [plots](http://f.briatte.org/parlviz/stortinget/plots.html)  | [viz](http://f.briatte.org/parlviz/stortinget)  |
+| **Portugal**                                  | [code](https://github.com/briatte/assembleia)  | [README](https://github.com/briatte/assembleia/README.md)  | [plots](http://f.briatte.org/parlviz/assembleia/plots.html)  | [viz](http://f.briatte.org/parlviz/assembleia)  |
 | **Romania** (both chambers)                   | [code](https://github.com/briatte/parlamentul) | [README](https://github.com/briatte/parlamentul/README.md) | [plots](http://f.briatte.org/parlviz/parlamentul/plots.html) | [viz](http://f.briatte.org/parlviz/parlamentul) |
+| **Slovakia**                                  | [code](https://github.com/briatte/nrsr)        | [README](https://github.com/briatte/nrsr/README.md)        | [plots](http://f.briatte.org/parlviz/nrsr/plots.html)        | [viz](http://f.briatte.org/parlviz/nrsr)        |
 | **Sweden**                                    | [code](https://github.com/briatte/riksdag)     | [README](https://github.com/briatte/riksdag/README.md)     | [plots](http://f.briatte.org/parlviz/riksdag/plots.html)     | [viz](http://f.briatte.org/parlviz/riksdag)     |
 | **Switzerland** (both chambers)               | [code](https://github.com/briatte/swparl)      | [README](https://github.com/briatte/swparl/README.md)      | [plots](http://f.briatte.org/parlviz/swparl/plots.html)      | [viz](http://f.briatte.org/parlviz/swparl)      |
 
+The data cover approximately 434 years of legislative activity.
 
 # DOCS
 
