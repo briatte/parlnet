@@ -148,26 +148,14 @@ The following variables were derived from the networks:
 - `gsw_max`: maximum Gross-Shalizi edge weight
 - `gsw_med`: median Gross-Shalizi edge weight
 - `gsw_mu`: mean Gross-Shalizi edge weight
-- `degree`: mean network degree
-- `distance_raw`: mean network distance based on raw cosponsorship counts
-- `distance_nfw`: mean network distance based on Newman-Fowler edge weights
-- `distance_gsw`: mean network distance based on Gross-Shalizi edge weights
-- `clustering_raw`: global clustering coefficient based on raw cosponsorship counts
-- `clustering_nfw`: global clustering coefficient based on Newman-Fowler edge weights
-- `clustering_gsw`: global clustering coefficient based on Gross-Shalizi edge weights
+- `degree`: mean unweighted degree
 - `mutuality`: network mutuality score
 - `recip_c`: correlation between within-dyad edge values
 - `recip_d`: network dyadic reciprocity
 - `recip_dnn`: ratio of mutual to non-null dyads
 - `recip_e`: proportion of reciprocal cosponsorship ties
 - `recip_elr`: log of edgewise reciprocity divided by density
-- `mod_raw`: partisan modularity, using raw cosponsorship counts
-- `mod_raw_max`: partisan modularity, using Newman-Fowler edge weights
-- `mod_nfw`: partisan modularity, using Gross-Shalizi edge weights
-- `mod_nfw_max`: maximized modularity based on raw cosponsorship counts
-- `mod_gsw`: maximized modularity based on Newman-Fowler edge weights
-- `mod_gsw_max`: maximized modularity based on Gross-Shalizi edge weights
 
 __Numbers of distinct values__ are useful to detect the absence of variance in some variables at the level of a specific network. It shows, for instance, that the seniority measure (time in office, in years) is unavailable in the earliest collected legislature of the [Belgian Senate](https://github.com/briatte/belparl), where it is equal for all sponsors.
 
-__Mutuality and reciprocity__ are based on the [`mutuality`](http://www.rdocumentation.org/packages/sna/functions/mutuality) and [`grecip`](http://www.rdocumentation.org/packages/sna/functions/grecip) functions of the [`sna`](http://www.jstatsoft.org/v24/i06/paper "Butts 2008") package. The documentation pages for both functions are particularly helpful to understand what each variable stands for. Unlike most other network measures reported above, these are unweighted.
+__Degree, mutuality and reciprocity__ are based on the [`degree`](http://www.rdocumentation.org/packages/sna/functions/degree), [`mutuality`](http://www.rdocumentation.org/packages/sna/functions/mutuality) and [`grecip`](http://www.rdocumentation.org/packages/sna/functions/grecip) functions of the [`sna`](http://www.jstatsoft.org/v24/i06/paper "Butts 2008") package.

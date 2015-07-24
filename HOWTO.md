@@ -17,7 +17,7 @@ __The main entry point of each repository is `make.r`.__ Each repository also co
 - `build.r` – the network building routine
 - `comm.r` – the committee co-membership routine
 
-The contents of the `functions.r` script is identical across all repositories, and the `data.r` and `build.r` scripts are occasionally broken into several files when there is more than one parliamentary chamber in the country.
+The contents of the `functions.r` script is identical across all repositories. Some of the other scripts are occasionally broken into several files when there is more than one parliamentary chamber in the country.
 
 __To build the networks of any given country__, set your working directory to its repository and run the `make.r` script after checking the list of package dependencies below. The `plot` and `gexf` boolean parameters can be set to `FALSE` to skip over network plots (see below).
 
@@ -32,19 +32,11 @@ The code will create a series of folders to store the results:
 
 Each repository depends on:
 
-- [`dplyr`](https://github.com/hadley/dplyr),
-[`ggplot2`](https://github.com/hadley/ggplot2) and
-[`stringr`](https://github.com/hadley/stringr),
-by [Hadley Wickham](https://github.com/hadley)
-- [`grid`](https://www.stat.auckland.ac.nz/~paul/grid/grid.html),
-by [Paul Murrell](https://www.stat.auckland.ac.nz/~paul/) (distributed with R)
-- [`network`](http://cran.r-project.org/web/packages/network/) and
-[`sna`](http://cran.r-project.org/web/packages/sna/),
-by [Carter T. Butts](http://erzuli.ss.uci.edu/~buttsc/) and others
-- [`rgexf`](http://bitbucket.org/gvegayon/rgexf),
-by [George Vega Yon](http://bitbucket.org/gvegayon/) and others
-- [`XML`](http://cran.r-project.org/web/packages/XML/),
-by [Duncan Temple Lang](http://www.stat.ucdavis.edu/~duncan/)
+- [`dplyr`](https://github.com/hadley/dplyr), [`ggplot2`](https://github.com/hadley/ggplot2) and [`stringr`](https://github.com/hadley/stringr), by [Hadley Wickham](https://github.com/hadley)
+- [`grid`](https://www.stat.auckland.ac.nz/~paul/grid/grid.html), by [Paul Murrell](https://www.stat.auckland.ac.nz/~paul/) (distributed with R)
+- [`network`](http://cran.r-project.org/web/packages/network/) and [`sna`](http://cran.r-project.org/web/packages/sna/), by [Carter T. Butts](http://erzuli.ss.uci.edu/~buttsc/) and others
+- [`rgexf`](http://bitbucket.org/gvegayon/rgexf), by [George Vega Yon](http://bitbucket.org/gvegayon/) and others
+- [`XML`](http://cran.r-project.org/web/packages/XML/), by [Duncan Temple Lang](http://www.stat.ucdavis.edu/~duncan/)
 
 The code also occasionally calls:
 
@@ -93,5 +85,5 @@ loaded via a namespace (and not attached):
 # NOTES
 
 * The scripts that handle the French upper chamber require a [PostgreSQL](https://www.postgresql.org/) installation: see the [`README`](https://github.com/briatte/parlement/blob/master/README.md) file of the [`parlement`](https://github.com/briatte/parlement) repository for further details. The `makeCxn` and `fetchQuery` PostgreSQL query functions found in the [`functions-pgsql.r`](https://github.com/briatte/parlement/blob/master/functions-pgsql.r) file of that repository are by [Erik Gregory](https://anrprogrammer.wordpress.com/2013/07/27/easier-database-querying-with-r/).
-* The `ggnet_save` function uses code from the `ggnet` function, by [Moritz Marbach](https://github.com/sumtxt) and myself. The complete function is published in the [`GGally`](https://github.com/ggobi/ggally) package by [Barret Schloerke](https://github.com/schloerke).
+* The `save_plot` function uses code from the `ggnet` function, by [Moritz Marbach](https://github.com/sumtxt) and myself. The complete function is published in the [`GGally`](https://github.com/ggobi/ggally) package by [Barret Schloerke](https://github.com/schloerke).
 * The `str_clean` and `str_space` text cleaning functions are lightweight remixes of the `scrubber` and `Trim` functions found in the very rich [`qdap`](https://github.com/trinker/qdap/) package by [Tyler Rinker](https://github.com/trinker/).
