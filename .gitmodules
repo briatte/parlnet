@@ -1,6 +1,9 @@
 [submodule "althing"]
 	path = althing
 	url = https://github.com/briatte/althing.git
+[submodule "assembleia"]
+	path = assembleia
+	url = https://github.com/briatte/assembleia.git
 [submodule "belparl"]
 	path = belparl
 	url = https://github.com/briatte/belparl.git
@@ -16,6 +19,9 @@
 [submodule "nationalrat"]
 	path = nationalrat
 	url = https://github.com/briatte/nationalrat.git
+[submodule "nrsr"]
+	path = nrsr
+	url = https://github.com/briatte/nrsr.git
 [submodule "parlamento"]
 	path = parlamento
 	url = https://github.com/briatte/parlamento.git
