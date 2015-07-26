@@ -26,7 +26,6 @@ The data cover approximately 434 years of legislative activity.
 
 # DOCS
 
-- The [DATA](DATA.md) file contains notes on the data included in this repository.
 - The [HOWTO](HOWTO.md) file contains detailed instructions to get and run the code.
 - The [TODO](TODO.md) file contains a list of known limitations and possible improvements.
 
