@@ -40,15 +40,13 @@ Each repository depends on:
 
 The code also occasionally calls:
 
-- the [`ggmap`](https://github.com/dkahle/ggmap) package by [David Kahle](https://github.com/dkahle) and [Hadley Wickham](https://github.com/hadley), to geocode constituencies,
 - the [`httr`](https://github.com/hadley/httr) package by [Hadley Wickham](https://github.com/hadley), to handle unusual HTTP calls,
 - the [`jsonlite`](https://github.com/jeroenooms/jsonlite) package by [Jeroen Ooms](https://github.com/jeroenooms), to parse JSON data,
-- the [`RPostgreSQL`](http://cran.r-project.org/web/packages/RPostgreSQL/) package by [Joe Conway](http://www.joeconway.com/) and others, to import PostgreSQL data, and
 - the [`rvest`](https://github.com/hadley/rvest) package by [Hadley Wickham](https://github.com/hadley), to simplify HTML parsing
 
 All packages can be installed from [CRAN](https://cran.r-project.org/).
 
-__As of July 2015, the code requires R ≥ 3.1.2__ in order to support version 0.4.2 of `dplyr` and to avoid a [small bug](https://github.com/hadley/lubridate/issues/194) that affects the conversion of French dates in versions of R below 3.0.3. Example session information after loading all required packages is copied below.
+__As of August 2015, the code requires R ≥ 3.1.2__ in order to support version 0.4.2 of `dplyr`. Example session information after loading all required packages is copied below.
 
 ```txt
 R version 3.2.1 (2015-06-18)
@@ -56,34 +54,27 @@ Platform: x86_64-apple-darwin13.4.0 (64-bit)
 Running under: OS X 10.9.5 (Mavericks)
 
 locale:
-[1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+[1] en_GB.UTF-8/en_GB.UTF-8/en_GB.UTF-8/C/en_GB.UTF-8/en_GB.UTF-8
 
 attached base packages:
 [1] grid      stats     graphics  grDevices utils     datasets  methods  
 [8] base     
 
 other attached packages:
- [1] downloader_0.4  jsonlite_0.9.16 RPostgreSQL_0.4 DBI_0.3.1      
- [5] ggmap_2.4       rvest_0.2.0     httr_1.0.0      ggplot2_1.0.1  
- [9] tnet_3.0.11     survival_2.38-3 rgexf_0.15.3    Rook_1.1-1     
-[13] sna_2.3-2       network_1.12.0  igraph_1.0.1    XML_3.98-1.3   
-[17] stringr_1.0.0   dplyr_0.4.2    
+ [1] jsonlite_0.9.16 httr_1.0.0      rvest_0.2.0     ggplot2_1.0.1  
+ [5] sna_2.3-2       network_1.12.0  rgexf_0.15.3    igraph_1.0.1   
+ [9] Rook_1.1-1      XML_3.98-1.3    stringr_1.0.0   dplyr_0.4.2    
 
 loaded via a namespace (and not attached):
- [1] Rcpp_0.11.6         plyr_1.8.3          tools_3.2.1        
- [4] digest_0.6.8        gtable_0.1.2        lattice_0.20-33    
- [7] png_0.1-7           mapproj_1.2-3       parallel_3.2.1     
-[10] proto_0.3-10        maps_2.3-10         RgoogleMaps_1.2.0.7
-[13] R6_2.1.0            jpeg_0.1-8          RJSONIO_1.3-0      
-[16] sp_1.1-1            reshape2_1.4.1      magrittr_1.5       
-[19] scales_0.2.5        splines_3.2.1       MASS_7.3-43        
-[22] assertthat_0.1      colorspace_1.2-6    geosphere_1.4-3    
-[25] brew_1.0-6          stringi_0.5-5       munsell_0.4.2      
-[28] rjson_0.2.15
+ [1] Rcpp_0.12.0      magrittr_1.5     MASS_7.3-43      munsell_0.4.2   
+ [5] colorspace_1.2-6 R6_2.1.0         brew_1.0-6       plyr_1.8.3      
+ [9] tools_3.2.1      parallel_3.2.1   gtable_0.1.2     DBI_0.3.1       
+[13] assertthat_0.1   digest_0.6.8     reshape2_1.4.1   stringi_0.5-5   
+[17] scales_0.2.5     proto_0.3-10
 ```
 
 # NOTES
 
-* The scripts that handle the French upper chamber require a [PostgreSQL](https://www.postgresql.org/) installation: see the [`README`](https://github.com/briatte/parlement/blob/master/README.md) file of the [`parlement`](https://github.com/briatte/parlement) repository for further details. The `makeCxn` and `fetchQuery` PostgreSQL query functions found in the [`functions-pgsql.r`](https://github.com/briatte/parlement/blob/master/functions-pgsql.r) file of that repository are by [Erik Gregory](https://anrprogrammer.wordpress.com/2013/07/27/easier-database-querying-with-r/).
+* The scripts that handle the French upper chamber require a [PostgreSQL](https://www.postgresql.org/) installation: see the [`README`](https://github.com/briatte/parlement/blob/master/README.md) file of the [`parlement`](https://github.com/briatte/parlement) repository for further details.
 * The `save_plot` function uses code from the `ggnet` function, by [Moritz Marbach](https://github.com/sumtxt) and myself. The complete function is published in the [`GGally`](https://github.com/ggobi/ggally) package by [Barret Schloerke](https://github.com/schloerke).
 * The `str_clean` and `str_space` text cleaning functions are lightweight remixes of the `scrubber` and `Trim` functions found in the very rich [`qdap`](https://github.com/trinker/qdap/) package by [Tyler Rinker](https://github.com/trinker/).
