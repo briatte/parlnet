@@ -26,13 +26,13 @@ The code will create a series of folders to store the results:
 - __Raw data__ will be stored in `raw`. These will almost always be HTML pages scraped from official parliamentary websites, or in the case of [Sweden](https://github.com/briatte/riksdag), JSON objects downloaded from its open data portal. The code for the [French Senate](https://github.com/briatte/parlement) requires to download and import PostgreSQL data manually, and the code for [Hungary](https://github.com/briatte/orszaggyules) requires to download a few bill indexes manually.
 - __Derived datasets__ will be stored in `data` as CSV files, along with the final networks, which will be stored as `network` objects in as many `.rda` files as there are parliamentary chambers in the country, except for [Italy](https://github.com/briatte/parlamento) and [Romania](https://github.com/briatte/parlamentul), where the networks of both chambers are stored as a single `rda` file. See the [`parlnet-data`](https://github.com/briatte/parlnet-data) repository for details on network attributes.
 - __Network plots__ will appear in `plots` as JPG and PDF files. The only difference between both formats is that the PDF plots include a legend showing the abbreviated party affiliations of the sponsors, on which the node colors are based. The plots can be skipped by setting `plot` to `FALSE` in `make.r`.
-- __Sponsor photos__ will be stored in `photos` or some variation of `photos_` if there is more than one parliamentary chamber in the country. The photos are only used in the [interactive visualizations](http://f.briatte.org/parlviz) of the networks, which are based on [GEXF](http://gexf.net/format/) versions of the networks. The GEXF exports will be saved to the root of the repository, and can be skipped by setting `gexf` to `FALSE` in `make.r`.
+- __Sponsor photos__ will be stored in `photos`, or some variation of it if there is more than one parliamentary chamber in the country. The photos are only used in the [interactive visualizations](http://f.briatte.org/parlviz) of the networks, which are based on [GEXF](http://gexf.net/format/) versions of the networks. The GEXF exports will be saved to the root of the repository, and can be skipped by setting `gexf` to `FALSE` in `make.r`.
 
 # DEPENDENCIES
 
 Each repository depends on:
 
-- [`dplyr`](https://github.com/hadley/dplyr), [`ggplot2`](https://github.com/hadley/ggplot2) and [`stringr`](https://github.com/hadley/stringr), by [Hadley Wickham](https://github.com/hadley)
+- [`dplyr`](https://github.com/hadley/dplyr), [`ggplot2`](https://github.com/hadley/ggplot2), [`httr`](https://github.com/hadley/httr) and [`stringr`](https://github.com/hadley/stringr), by [Hadley Wickham](https://github.com/hadley)
 - [`grid`](https://www.stat.auckland.ac.nz/~paul/grid/grid.html), by [Paul Murrell](https://www.stat.auckland.ac.nz/~paul/) (distributed with R)
 - [`network`](http://cran.r-project.org/web/packages/network/) and [`sna`](http://cran.r-project.org/web/packages/sna/), by [Carter T. Butts](http://erzuli.ss.uci.edu/~buttsc/) and others
 - [`rgexf`](http://bitbucket.org/gvegayon/rgexf), by [George Vega Yon](http://bitbucket.org/gvegayon/) and others
@@ -40,7 +40,6 @@ Each repository depends on:
 
 The code also occasionally calls:
 
-- the [`httr`](https://github.com/hadley/httr) package by [Hadley Wickham](https://github.com/hadley), to handle unusual HTTP calls,
 - the [`jsonlite`](https://github.com/jeroenooms/jsonlite) package by [Jeroen Ooms](https://github.com/jeroenooms), to parse JSON data,
 - the [`rvest`](https://github.com/hadley/rvest) package by [Hadley Wickham](https://github.com/hadley), to simplify HTML parsing
 
