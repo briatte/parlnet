@@ -23,10 +23,10 @@ __To build the networks of any given country__, set your working directory to it
 
 The code will create a series of folders to store the results:
 
-- __Raw data__ are stored in `raw`. All raw data are scraped from official parliamentary websites, generally as JSON or HTML files.
-- __Derived datasets__ are stored in `data` as CSV files, along with the final networks, which are stored as `network` objects in a `.rda` file.
-- __Network plots__ will appear in `plots` as JPG and PDF files. Plotting can be skipped by setting `plot` to `FALSE` in `make.r`.
-- __Sponsor photos__ are stored in `photos`, or some variation of it if there is more than one parliamentary chamber in the country. Sponsor photos are only used in the [interactive visualizations](http://f.briatte.org/parlviz) of the networks, which are based on [GEXF](http://gexf.net/format/) exports of the original objects. The exports will be saved to the root of the repository. Exporting can be skipped by setting `gexf` to `FALSE` in `make.r`.
+- __Raw data__ are stored in `raw`. All raw data are scraped from official parliamentary websites, generally as JSON or HTML files. The code will look for any zipped raw data folder named `raw.zip` to start with, and will do the same for `photos` or variations of it. This makes it easy to update the networks, which only requires to remove the `data` folder and to run the code.
+- __Derived datasets__ are stored in `data` as CSV files, along with the final networks, which are stored as `network` objects in a `.rda` file. The objects include weighted cosponsorship directed networks (prefix `net_`) and, when possible, weighted committee co-membership undirected networks (prefix `conet_`). See the `parlnet.csv` dataset for measures derived from them.
+- __Network plots__ will appear in `plots` as JPG and PDF files. The PDF files include a legend with the party abbreviations corresponding to each node color. Both plots size nodes proportionally to their degree quartile and place them by Fruchterman-Reingold placement. Last, edges are coloured by shared party affiliation when relevant. Plotting can be skipped by setting `plot` to `FALSE` in `make.r`.
+- __Sponsor photos__ are stored in `photos`, or some variation of it if there is more than one parliamentary chamber in the country. Sponsor photos are only used in the [interactive visualizations](http://f.briatte.org/parlviz) of the networks, which are based on [GEXF](http://gexf.net/format/) exports of the original `network` objects. The exports will be saved to the root of the repository. Exporting can be skipped by setting `gexf` to `FALSE` in `make.r`.
 
 # DEPENDENCIES
 
