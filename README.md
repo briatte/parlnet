@@ -34,7 +34,7 @@ The replication material provided in this repository and its submodules is avail
 
 [![DOI](https://zenodo.org/badge/15478/briatte/parlnet.svg)](https://zenodo.org/badge/latestdoi/15478/briatte/parlnet)
 
-The raw data collected by [release 1.9](releases) (August 2015) is available online as a 1.5 GB archive of HTML, JSON and XML files. It can be accessed at the following DOI handle:
+The raw data collected by [release 1.9](/releases) (August 2015) is available online as a 1.5 GB archive of HTML, JSON and XML files. It can be accessed at the following DOI handle:
 
 [![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.23445.svg)](http://dx.doi.org/10.5281/zenodo.23445)
 
