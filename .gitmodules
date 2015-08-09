@@ -49,3 +49,6 @@
 [submodule "nrsr"]
 	path = nrsr
 	url = https://github.com/briatte/nrsr.git
+[submodule "oireachtas"]
+	path = oireachtas
+	url = https://github.com/briatte/oireachtas.git
