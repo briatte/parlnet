@@ -23,6 +23,8 @@ This repository contains [R](http://www.r-project.org/) code to build and plot 1
 
 # DOCS
 
+The data included in this repository is briefly presented in [this note](http://f.briatte.org/research/parlnet-note.pdf) and fully documented in [this appendix](http://f.briatte.org/research/parlnet-appendix.pdf), which explains how the data are collected and how the networks are constructed.
+
 The repository contains two additional documentation files:
 
 - The [HOWTO](HOWTO.md) file contains detailed instructions to get and run the code.
