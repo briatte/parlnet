@@ -1,4 +1,4 @@
-This repository contains [R](http://www.r-project.org/) code to build and plot 120 cosponsorship networks out of the legislative activity of 22 parliamentary chambers in 17 European countries. The data cover approximately 454 years of parliamentary interactions.
+This repository contains [R](http://www.r-project.org/) code to build and plot 120 cosponsorship networks out of the legislative activity of 24 parliamentary chambers in 18 European countries. The data cover approximately 492 years of parliamentary interactions.
 
 | Country / Chamber | | | | |
 |:----------------------------------------------|:----------------------------------------------:|:----------------------------------------------------------:|:------------------------------------------------------------:|:-----------------------------------------------:|
@@ -11,6 +11,7 @@ This repository contains [R](http://www.r-project.org/) code to build and plot 1
 | **France** (both chambers)                    | [code](https://github.com/briatte/parlement)   | [README](https://github.com/briatte/parlement/blob/master/README.md)   | [plots](http://f.briatte.org/parlviz/parlement/plots.html)   | [viz](http://f.briatte.org/parlviz/parlement)   |
 | **Hungary**                                   | [code](https://github.com/briatte/orszaggyules)| [README](https://github.com/briatte/orszaggyules/blob/master/README.md)| [plots](http://f.briatte.org/parlviz/orszaggyules/plots.html)| [viz](http://f.briatte.org/parlviz/orszaggyules)|
 | **Iceland**                                   | [code](https://github.com/briatte/althing)     | [README](https://github.com/briatte/althing/blob/master/README.md)     | [plots](http://f.briatte.org/parlviz/althing/plots.html)     | [viz](http://f.briatte.org/parlviz/althing)     |
+| **Ireland**                                   | [code](https://github.com/briatte/oireachtas)  | [README](https://github.com/briatte/oireachtas/blob/master/README.md)  | [plots](http://f.briatte.org/parlviz/oireachtas/plots.html)  | [viz](http://f.briatte.org/parlviz/oireachtas)  |
 | **Italy** (both chambers)                     | [code](https://github.com/briatte/parlamento)  | [README](https://github.com/briatte/parlamento/blob/master/README.md)  | [plots](http://f.briatte.org/parlviz/parlamento/plots.html)  | [viz](http://f.briatte.org/parlviz/parlamento)  |
 | **Lithuania**                                 | [code](https://github.com/briatte/seimas)      | [README](https://github.com/briatte/seimas/blob/master/README.md)      | [plots](http://f.briatte.org/parlviz/seimas/plots.html)      | [viz](http://f.briatte.org/parlviz/seimas)      |
 | **Norway**                                    | [code](https://github.com/briatte/stortinget)  | [README](https://github.com/briatte/stortinget/blob/master/README.md)  | [plots](http://f.briatte.org/parlviz/stortinget/plots.html)  | [viz](http://f.briatte.org/parlviz/stortinget)  |
@@ -34,9 +35,9 @@ The replication material provided in this repository and its submodules is avail
 
 [![DOI](https://zenodo.org/badge/15478/briatte/parlnet.svg)](https://zenodo.org/badge/latestdoi/15478/briatte/parlnet)
 
-The raw data collected by [release 1.9](https://github.com/briatte/parlnet/releases) (August 2015) is available online as a 1.5 GB archive of HTML, JSON and XML files. It can be accessed at the following DOI handle:
+The raw data collected by [release 2.0](https://github.com/briatte/parlnet/releases) (August 2015) is available online as a 1.5 GB archive of HTML, JSON and XML files. It can be accessed at the following DOI handle:
 
-[![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.23445.svg)](http://dx.doi.org/10.5281/zenodo.23445)
+[![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.27328.svg)](http://dx.doi.org/10.5281/zenodo.27328)
 
 Please report bugs or suggestions as [issues](https://github.com/briatte/parlnet/issues), either in this repository if the issue affects all countries, or in the country-specific repository otherwise.
 
