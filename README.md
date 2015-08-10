@@ -33,10 +33,6 @@ The repository contains two additional documentation files:
 
 The `README` file of each country-specific repository contains further details on code execution and data collection, as well as additional thanks to people who provided help.
 
-The replication material provided in this repository and its submodules is available at [GitHub](https://github.com/briatte/parlnet/) or through the following DOI handle:
-
-[![DOI](https://zenodo.org/badge/15478/briatte/parlnet.svg)](https://zenodo.org/badge/latestdoi/15478/briatte/parlnet)
-
 The raw data collected by [release 2.0](https://github.com/briatte/parlnet/releases) (August 2015) is available online as a 1.5 GB archive of HTML, JSON and XML files. It can be accessed at the following DOI handle:
 
 [![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.27328.svg)](http://dx.doi.org/10.5281/zenodo.27328)
