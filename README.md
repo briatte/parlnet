@@ -1,4 +1,4 @@
-This repository contains [R](http://www.r-project.org/) code to build and plot 120 cosponsorship networks out of the legislative activity of 24 parliamentary chambers in 18 European countries. The data cover approximately 492 years of parliamentary interactions.
+This repository contains [R](http://www.r-project.org/) code to build and plot 128 cosponsorship networks out of the legislative activity of 24 parliamentary chambers in 18 European countries. The data cover approximately 492 years of parliamentary interactions. The resulting networks are stored in [`parlnet.rda`](https://github.com/briatte/parlnet/blob/master/parlnet.rda).
 
 | Country / Chamber | | | | |
 |:----------------------------------------------|:----------------------------------------------:|:----------------------------------------------------------:|:------------------------------------------------------------:|:-----------------------------------------------:|

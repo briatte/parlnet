@@ -8,10 +8,12 @@ cd parlnet
 git submodule update --init
 ```
 
+The `parlnet` repository is [versioned](https://github.com/briatte/parlnet/releases). Cloning the most recent version of the repository, as recommended above, will clone the most recent release and the few bugfixes that have been applied to it since publication.
+
 __The main entry point of each repository is `make.r`.__ Each repository also contains the following scripts, which are run in that order by `make.r`:
 
-- `load.r` – package loading
-- `parties.r` – party codes, colors and names
+- `load.r` – package loading (see [dependencies](#dependencies))
+- `parties.r` – party codes, colors, names and scores
 - `functions.r` – network and text utilities
 - `data.r` – scrapers for bills and sponsors
 - `build.r` – the network building routine
@@ -19,14 +21,31 @@ __The main entry point of each repository is `make.r`.__ Each repository also co
 
 The contents of the `functions.r` script is identical across all repositories. Some of the other scripts are occasionally broken into several files when there is more than one parliamentary chamber in the country.
 
+> __Note:__ the scripts that handle the French upper chamber require a [PostgreSQL](https://www.postgresql.org/) installation; see the [`README`](https://github.com/briatte/parlement/blob/master/README.md) file of the [`parlement`](https://github.com/briatte/parlement) repository for further details. Once PostgreSQL is installed, the repository contains a [shell script](https://github.com/briatte/parlement/blob/master/psql.sh) that handles all required operations. This is the only dependency external to R in the entire `parlnet` repository. The same repository also contains an additional set of functions to clean up French names and identify legislatures.
+
 __To build the networks of any given country__, set your working directory to its repository and run the `make.r` script after checking the list of package dependencies below. The `plot` and `gexf` boolean parameters can be set to `FALSE` to skip over network plots (see below).
 
 The code will create a series of folders to store the results:
 
 - __Raw data__ are stored in `raw`. All raw data are scraped from official parliamentary websites, generally as JSON or HTML files. The code will look for any zipped raw data folder named `raw.zip` to start with, and will do the same for `photos` or variations of it. This makes it easy to update the networks, which only requires to remove the `data` folder and to run the code.
-- __Derived datasets__ are stored in `data` as CSV files, along with the final networks, which are stored as `network` objects in a `.rda` file. The objects include weighted cosponsorship directed networks (prefix `net_`) and, when possible, weighted committee co-membership undirected networks (prefix `conet_`). See the `parlnet.csv` dataset for measures derived from them.
-- __Network plots__ will appear in `plots` as JPG and PDF files. The PDF files include a legend with the party abbreviations corresponding to each node color. Both plots size nodes proportionally to their degree quartile and place them by Fruchterman-Reingold placement. Last, edges are coloured by shared party affiliation when relevant. Plotting can be skipped by setting `plot` to `FALSE` in `make.r`.
-- __Sponsor photos__ are stored in `photos`, or some variation of it if there is more than one parliamentary chamber in the country. Sponsor photos are only used in the [interactive visualizations](http://f.briatte.org/parlviz) of the networks, which are based on [GEXF](http://gexf.net/format/) exports of the original `network` objects. The exports will be saved to the root of the repository. Exporting can be skipped by setting `gexf` to `FALSE` in `make.r`.
+	
+	The `raw` data folders are often internally organised in several subfolders containing bill indexes (lists of bills), bill pages, sponsor indexes and sponsor pages. The folder hierarchy is created by `make.r` if it does not exist.
+	
+	The [`README`](https://github.com/briatte/parlnet/blob/master/README.md) contains a link to the raw data collected by the most recent release of `parlnet`, in order to make it easy to replicate all networks in a limited amount of time (less than half an hour).
+
+- __Derived datasets__ are stored in `data` as CSV files, along with the final networks, which are stored as `network` objects in a `.rda` file. The objects include weighted cosponsorship directed networks (prefix `net_`) and, when possible, weighted committee co-membership undirected networks (prefix `conet_`). See the [`parlnet.csv`](https://github.com/briatte/parlnet/blob/master/parlnet.csv) dataset for measures derived from them.
+
+	The network-level (chamber-level), vertex-level (sponsor-level) and edge-level (edge weights) attributes of the networks are documented in full in [the appendix](http://f.briatte.org/research/parlnet-appendix.pdf) to the repository.
+
+	The `.rda` file produced by each country will also contain the raw bills data (as `bills_` objects) and the raw edge lists (as `edges_` objects) used during network construction.
+	
+	The [`parlnet.rda`](https://github.com/briatte/parlnet/blob/master/parlnet.rda) file contains the `net_` and `conet_` network objects produced for each country, as obtained from a clean run of all `make.r` scripts contained in the repository.
+
+- __Network plots__ will appear in `plots` as JPG and PDF files. The PDF files include a legend with the party abbreviations corresponding to each node color. Both plots size nodes proportionally to their degree quartile and place them by [Fruchterman-Reingold placement](https://en.wikipedia.org/wiki/Force-directed_graph_drawing). Last, edges are coloured by shared party affiliation when relevant. Plotting can be skipped by setting `plot` to `FALSE` in `make.r`.
+
+	The placement method used in the plots can be changed to any method supported by the `sna` package (e.g. `kamadakawai`) by editing the value of the `mode` object in `make.r`.
+
+- __Sponsor photos__ are stored in `photos`, or some variation of it if there is more than one parliamentary chamber in the country. Sponsor photos are only used in the [interactive visualizations](http://f.briatte.org/parlviz) of the networks, which are based on [GEXF](http://gexf.net/format/) exports of the networks. The exports will be saved to the root of the repository. Exporting can be skipped by setting `gexf` to `FALSE` in `make.r`.
 
 # DEPENDENCIES
 
@@ -72,8 +91,7 @@ loaded via a namespace (and not attached):
 [17] scales_0.2.5     proto_0.3-10
 ```
 
-# NOTES
-
-* The scripts that handle the French upper chamber require a [PostgreSQL](https://www.postgresql.org/) installation: see the [`README`](https://github.com/briatte/parlement/blob/master/README.md) file of the [`parlement`](https://github.com/briatte/parlement) repository for further details.
-* The `save_plot` function uses code from the `ggnet` function, by [Moritz Marbach](https://github.com/sumtxt) and myself. The complete function is published in the [`GGally`](https://github.com/ggobi/ggally) package by [Barret Schloerke](https://github.com/schloerke).
-* The `str_clean` and `str_space` text cleaning functions are lightweight remixes of the `scrubber` and `Trim` functions found in the very rich [`qdap`](https://github.com/trinker/qdap/) package by [Tyler Rinker](https://github.com/trinker/).
+> __Notes:__
+> 
+> * The `save_plot` function found in `functions.r` uses code from the `ggnet` function, by [Moritz Marbach](https://github.com/sumtxt) and myself. The complete function is published in the [`GGally`](https://github.com/ggobi/ggally) package by [Barret Schloerke](https://github.com/schloerke). See the [`ggnet`](https://github.com/briatte/ggnet) repository for the full function code with many examples.
+> * The `str_clean` and `str_space` text cleaning functions found in `functions.r` are lightweight remixes of the `scrubber` and `Trim` functions found in the very rich [`qdap`](https://github.com/trinker/qdap/) package by [Tyler Rinker](https://github.com/trinker/).
