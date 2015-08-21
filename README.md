@@ -41,6 +41,13 @@ Please report bugs or suggestions as [issues](https://github.com/briatte/parlnet
 
 The code to produce [interactive visualizations](http://f.briatte.org/parlviz) of the networks is available separately from the [`parlviz`](https://github.com/briatte/parlviz) repository.
 
+# EXTRAS
+
+- Amendment cosponsorships in the **European Parliament**: [code](https://github.com/briatte/epam), [plots](http://f.briatte.org/parlviz/epam/plots.html), [viz](http://f.briatte.org/parlviz/epam/)
+- Amendment cosponsorships in the **Tunisian Constituent Assembly**: [code](https://github.com/briatte/marsad), [plots](http://f.briatte.org/parlviz/marsad/plots.html), [viz](http://f.briatte.org/parlviz/marsad)
+- Bill cosponsorships in the **U.S. Congress**: [code](https://github.com/briatte/congress), [plots](http://f.briatte.org/parlviz/congress/plots.html)
+- Early day motion cosponsorships in the **U.K. House of Commons**: [code](https://github.com/briatte/edm), [plots](http://f.briatte.org/parlviz/edm/plots.html)
+
 # THANKS
 
 - [Baptiste Coulmont][coulmont] and [James Fowler][fowler] inspired this project
