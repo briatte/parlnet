@@ -52,3 +52,6 @@
 [submodule "oireachtas"]
 	path = oireachtas
 	url = https://github.com/briatte/oireachtas.git
+[submodule "knesset"]
+	path = knesset
+	url = https://github.com/briatte/knesset.git
