@@ -1,4 +1,4 @@
-This repository contains [R](http://www.r-project.org/) code to build and plot 128 cosponsorship networks out of the legislative activity of 24 parliamentary chambers in 18 European countries. The data cover approximately 492 years of parliamentary interactions. The resulting networks are stored in [`parlnet.rda`](https://github.com/briatte/parlnet/blob/master/parlnet.rda).
+This repository contains [R](http://www.r-project.org/) code to build and plot 131 cosponsorship networks out of the legislative activity of 25 parliamentary chambers in 31 European countries. The data cover approximately 499 years of parliamentary interactions. The resulting networks are stored in [`parlnet.rda`](https://github.com/briatte/parlnet/blob/master/parlnet.rda).
 
 | Country / Chamber | | | | |
 |:----------------------------------------------|:----------------------------------------------:|:----------------------------------------------------------:|:------------------------------------------------------------:|:-----------------------------------------------:|
@@ -12,6 +12,7 @@ This repository contains [R](http://www.r-project.org/) code to build and plot 1
 | **Hungary**                                   | [code](https://github.com/briatte/orszaggyules)| [README](https://github.com/briatte/orszaggyules/blob/master/README.md)| [plots](http://f.briatte.org/parlviz/orszaggyules/plots.html)| [viz](http://f.briatte.org/parlviz/orszaggyules)|
 | **Iceland**                                   | [code](https://github.com/briatte/althing)     | [README](https://github.com/briatte/althing/blob/master/README.md)     | [plots](http://f.briatte.org/parlviz/althing/plots.html)     | [viz](http://f.briatte.org/parlviz/althing)     |
 | **Ireland** (both chambers)                   | [code](https://github.com/briatte/oireachtas)  | [README](https://github.com/briatte/oireachtas/blob/master/README.md)  | [plots](http://f.briatte.org/parlviz/oireachtas/plots.html)  | [viz](http://f.briatte.org/parlviz/oireachtas)  |
+| **Israel**                                    | [code](https://github.com/briatte/knesset)     | [README](https://github.com/briatte/knesset/blob/master/README.md)     | [plots](http://f.briatte.org/parlviz/knesset/plots.html)     | [viz](http://f.briatte.org/parlviz/knesset)     |
 | **Italy** (both chambers)                     | [code](https://github.com/briatte/parlamento)  | [README](https://github.com/briatte/parlamento/blob/master/README.md)  | [plots](http://f.briatte.org/parlviz/parlamento/plots.html)  | [viz](http://f.briatte.org/parlviz/parlamento)  |
 | **Lithuania**                                 | [code](https://github.com/briatte/seimas)      | [README](https://github.com/briatte/seimas/blob/master/README.md)      | [plots](http://f.briatte.org/parlviz/seimas/plots.html)      | [viz](http://f.briatte.org/parlviz/seimas)      |
 | **Norway**                                    | [code](https://github.com/briatte/stortinget)  | [README](https://github.com/briatte/stortinget/blob/master/README.md)  | [plots](http://f.briatte.org/parlviz/stortinget/plots.html)  | [viz](http://f.briatte.org/parlviz/stortinget)  |
@@ -33,9 +34,9 @@ The repository contains two additional documentation files:
 
 The `README` file of each country-specific repository contains further details on code execution and data collection, as well as additional thanks to people who provided help.
 
-The raw data collected by [release 2.0](https://github.com/briatte/parlnet/releases) (August 2015) is available online as a 1.5 GB archive of HTML, JSON and XML files. It can be accessed at the following DOI handle:
+The raw data collected by [release 2.1](https://github.com/briatte/parlnet/releases) (August 2015) is available online as a 1.5 GB archive of HTML, JSON and XML files. It can be accessed at the following DOI handle:
 
-[![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.27328.svg)](http://dx.doi.org/10.5281/zenodo.27328)
+[![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.29526.svg)](http://dx.doi.org/10.5281/zenodo.29526)
 
 Please report bugs or suggestions as [issues](https://github.com/briatte/parlnet/issues), either in this repository if the issue affects all countries, or in the country-specific repository otherwise.
 
