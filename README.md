@@ -46,6 +46,7 @@ The code to produce [interactive visualizations](http://f.briatte.org/parlviz) o
 
 - Amendment cosponsorships in the **European Parliament**: [code](https://github.com/briatte/epam), [plots](http://f.briatte.org/parlviz/epam/plots.html), [viz](http://f.briatte.org/parlviz/epam/)
 - Amendment cosponsorships in the **Tunisian Constituent Assembly**: [code](https://github.com/briatte/marsad), [plots](http://f.briatte.org/parlviz/marsad/plots.html), [viz](http://f.briatte.org/parlviz/marsad)
+- Bill cosponsorships in the **National Assembly of South Korea**: [code](https://github.com/briatte/guhkhoe), [plots](http://f.briatte.org/parlviz/guhkhoe/plots.html)
 - Bill cosponsorships in the **U.S. Congress**: [code](https://github.com/briatte/congress), [plots](http://f.briatte.org/parlviz/congress/plots.html)
 - Early day motion cosponsorships in the **U.K. House of Commons**: [code](https://github.com/briatte/edm), [plots](http://f.briatte.org/parlviz/edm/plots.html)
 
