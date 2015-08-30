@@ -8,7 +8,7 @@ cd parlnet
 git submodule update --init
 ```
 
-The `parlnet` repository is [versioned](https://github.com/briatte/parlnet/releases). Cloning the most recent version of the repository, as recommended above, will clone the most recent release and the few bugfixes that have been applied to it since publication.
+The `parlnet` repository is [versioned](https://github.com/briatte/parlnet/releases). Cloning the most recent version of the repository, as recommended above, will clone the most recent release and the changes that have been applied to it since publication.
 
 __The main entry point of each repository is `make.r`.__ Each repository also contains the following scripts, which are run in that order by `make.r`:
 
@@ -46,6 +46,8 @@ The code will create a series of folders to store the results:
 	The placement method used in the plots can be changed to any method supported by the `sna` package (e.g. `kamadakawai`) by editing the value of the `mode` object in `make.r`.
 
 - __Sponsor photos__ are stored in `photos`, or some variation of it if there is more than one parliamentary chamber in the country. Sponsor photos are only used in the [interactive visualizations](http://f.briatte.org/parlviz) of the networks, which are based on [GEXF](http://gexf.net/format/) exports of the networks. The exports will be saved to the root of the repository. Exporting can be skipped by setting `gexf` to `FALSE` in `make.r`.
+
+The `parlnet.log` file gives the estimated runtime of each repository when the raw data and derived datasets already exist on disk, and when plotting and exporting the networks is skipped. On a standard laptop, replicating the `parlnet.rda` object by running all repositories takes approximately half an hour.
 
 # DEPENDENCIES
 
