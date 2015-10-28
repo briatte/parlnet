@@ -25,9 +25,6 @@
 [submodule "parlement"]
 	path = parlement
 	url = https://github.com/briatte/parlement.git
-[submodule "poslanecka"]
-	path = poslanecka
-	url = https://github.com/briatte/poslanecka.git
 [submodule "riksdag"]
 	path = riksdag
 	url = https://github.com/briatte/riksdag.git
