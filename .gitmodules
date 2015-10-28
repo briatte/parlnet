@@ -52,3 +52,6 @@
 [submodule "knesset"]
 	path = knesset
 	url = https://github.com/briatte/knesset.git
+[submodule "parlament"]
+	path = parlament
+	url = https://github.com/briatte/parlament
