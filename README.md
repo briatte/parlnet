@@ -34,9 +34,9 @@ The repository contains two additional documentation files:
 
 The `README` file of each country-specific repository contains further details on code execution and data collection, as well as additional thanks to people who provided help.
 
-The raw data collected by [release 2.1](https://github.com/briatte/parlnet/releases) (August 2015) is available online as a 1.5 GB archive of HTML, JSON and XML files. It can be accessed at the following DOI handle:
+The raw data collected by [release 2.3](https://github.com/briatte/parlnet/releases) (October 2015) is available online as a 1.5 GB archive of HTML, JSON and XML files. It can be accessed at the following DOI handle:
 
-[![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.29526.svg)](http://dx.doi.org/10.5281/zenodo.29526)
+[![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.32884.svg)](http://dx.doi.org/10.5281/zenodo.32884)
 
 Please report bugs or suggestions as [issues](https://github.com/briatte/parlnet/issues), either in this repository if the issue affects all countries, or in the country-specific repository otherwise.
 
