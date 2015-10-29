@@ -24,11 +24,11 @@ This repository contains [R](http://www.r-project.org/) code to build and plot 1
 
 # DOCS
 
-The data included in this repository is briefly presented in [this note](http://f.briatte.org/research/parlnet-note.pdf) and fully documented in [this appendix](http://f.briatte.org/research/parlnet-appendix.pdf), which explains how the data are collected and how the networks are constructed.
+The data included in this repository are briefly presented in [this note](http://f.briatte.org/research/parlnet-note.pdf) and are fully documented in [this appendix](http://f.briatte.org/research/parlnet-appendix.pdf), which explains how they were collected and how the networks were constructed.
 
 The repository contains two additional documentation files:
 
-- The [HOWTO](HOWTO.md) file contains detailed instructions to get and run the code.
+- The [HOWTO](HOWTO.md) file contains detailed instructions on how to get and run the code.
 - The [TODO](TODO.md) file contains a list of known limitations and possible improvements.
 - The wiki contains [links](https://github.com/briatte/parlnet/wiki) to parliamentary open data services and third parties.
 

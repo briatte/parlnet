@@ -66,10 +66,10 @@ The code also occasionally calls:
 
 All packages can be installed from [CRAN](https://cran.r-project.org/).
 
-__As of August 2015, the code requires R ≥ 3.1.2__ in order to support version 0.4.2 of `dplyr`. Example session information after loading all required packages is copied below.
+__As of August 2015, the code requires R ≥ 3.1.2__ in order to support `dplyr`. Example session information after loading all required packages is copied below.
 
 ```txt
-R version 3.2.1 (2015-06-18)
+R version 3.2.2 (2015-08-14)
 Platform: x86_64-apple-darwin13.4.0 (64-bit)
 Running under: OS X 10.9.5 (Mavericks)
 
@@ -81,16 +81,16 @@ attached base packages:
 [8] base     
 
 other attached packages:
- [1] jsonlite_0.9.16 httr_1.0.0      rvest_0.2.0     ggplot2_1.0.1  
- [5] sna_2.3-2       network_1.12.0  rgexf_0.15.3    igraph_1.0.1   
- [9] Rook_1.1-1      XML_3.98-1.3    stringr_1.0.0   dplyr_0.4.2    
+ [1] jsonlite_0.9.17    rvest_0.3.0        xml2_0.1.2         ggplot2_1.0.1.9003
+ [5] sna_2.3-2          network_1.13.0     rgexf_0.15.3       igraph_1.0.1      
+ [9] Rook_1.1-1         XML_3.98-1.3       stringr_1.0.0      httr_1.0.0        
+[13] dplyr_0.4.3       
 
 loaded via a namespace (and not attached):
- [1] Rcpp_0.12.0      magrittr_1.5     MASS_7.3-43      munsell_0.4.2   
- [5] colorspace_1.2-6 R6_2.1.0         brew_1.0-6       plyr_1.8.3      
- [9] tools_3.2.1      parallel_3.2.1   gtable_0.1.2     DBI_0.3.1       
-[13] assertthat_0.1   digest_0.6.8     reshape2_1.4.1   stringi_0.5-5   
-[17] scales_0.2.5     proto_0.3-10
+ [1] Rcpp_0.12.1      magrittr_1.5     munsell_0.4.2    colorspace_1.2-6
+ [5] R6_2.1.1         brew_1.0-6       plyr_1.8.3       tools_3.2.2     
+ [9] parallel_3.2.2   gtable_0.1.2     DBI_0.3.1        assertthat_0.1  
+[13] stringi_1.0-1    scales_0.3.0
 ```
 
 > __Notes:__
