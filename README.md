@@ -26,13 +26,7 @@ This repository contains [R](http://www.r-project.org/) code to build and plot 1
 
 The data included in this repository are briefly presented in [this note](http://f.briatte.org/research/parlnet-note.pdf) and are fully documented in [this appendix](http://f.briatte.org/research/parlnet-appendix.pdf), which explains how they were collected and how the networks were constructed.
 
-The repository contains two additional documentation files:
-
-- The [HOWTO](HOWTO.md) file contains detailed instructions on how to get and run the code.
-- The [TODO](TODO.md) file contains a list of known limitations and possible improvements.
-- The wiki contains [links](https://github.com/briatte/parlnet/wiki) to parliamentary open data services and third parties.
-
-The `README` file of each country-specific repository contains further details on code execution and data collection, as well as additional thanks to people who provided help.
+The repository contains a [HOWTO](HOWTO.md) file with detailed instructions on how to get and run the code, and the `README` file of each country-specific repository contains further details on code execution and data collection, as well as additional thanks to people who provided help. Further ideas and links are available in the [repository wiki](https://github.com/briatte/parlnet/wiki).
 
 The raw data collected by [release 2.3](https://github.com/briatte/parlnet/releases) (October 2015) is available online as a 1.5 GB archive of HTML, JSON and XML files. It can be accessed at the following DOI handle:
 
