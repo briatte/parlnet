@@ -55,3 +55,6 @@
 [submodule "parlament"]
 	path = parlament
 	url = https://github.com/briatte/parlament
+[submodule "riigikogu"]
+	path = riigikogu
+	url = https://github.com/briatte/riigikogu
