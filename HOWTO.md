@@ -81,13 +81,13 @@ attached base packages:
 [8] base     
 
 other attached packages:
- [1] jsonlite_0.9.17    rvest_0.3.0        xml2_0.1.2         ggplot2_1.0.1.9003
+ [1] jsonlite_0.9.17    rvest_0.3.1        xml2_0.1.2         ggplot2_1.0.1.9003
  [5] sna_2.3-2          network_1.13.0     rgexf_0.15.3       igraph_1.0.1      
  [9] Rook_1.1-1         XML_3.98-1.3       stringr_1.0.0      httr_1.0.0        
 [13] dplyr_0.4.3       
 
 loaded via a namespace (and not attached):
- [1] Rcpp_0.12.1      magrittr_1.5     munsell_0.4.2    colorspace_1.2-6
+ [1] Rcpp_0.12.2      magrittr_1.5     munsell_0.4.2    colorspace_1.2-6
  [5] R6_2.1.1         brew_1.0-6       plyr_1.8.3       tools_3.2.2     
  [9] parallel_3.2.2   gtable_0.1.2     DBI_0.3.1        assertthat_0.1  
 [13] stringi_1.0-1    scales_0.3.0
