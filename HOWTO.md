@@ -56,13 +56,14 @@ Each repository depends on:
 - [`dplyr`](https://github.com/hadley/dplyr), [`ggplot2`](https://github.com/hadley/ggplot2), [`httr`](https://github.com/hadley/httr) and [`stringr`](https://github.com/hadley/stringr), by [Hadley Wickham](https://github.com/hadley)
 - [`grid`](https://www.stat.auckland.ac.nz/~paul/grid/grid.html), by [Paul Murrell](https://www.stat.auckland.ac.nz/~paul/) (distributed with R)
 - [`network`](http://cran.r-project.org/web/packages/network/) and [`sna`](http://cran.r-project.org/web/packages/sna/), by [Carter T. Butts](http://erzuli.ss.uci.edu/~buttsc/) and others
-- [`rgexf`](http://bitbucket.org/gvegayon/rgexf), by [George Vega Yon](http://bitbucket.org/gvegayon/) and others
+- [`rgexf`](http://bitbucket.org/gvegayon/rgexf), by [George Vega Yon](http://bitbucket.org/gvegayon/) and [others](https://bitbucket.org/gvegayon/rgexf/commits/all)
 - [`XML`](http://cran.r-project.org/web/packages/XML/), by [Duncan Temple Lang](http://www.stat.ucdavis.edu/~duncan/)
 
 The code also occasionally calls:
 
-- the [`jsonlite`](https://github.com/jeroenooms/jsonlite) package by [Jeroen Ooms](https://github.com/jeroenooms), to parse JSON data,
-- the [`rvest`](https://github.com/hadley/rvest) package by [Hadley Wickham](https://github.com/hadley), to simplify HTML parsing
+- the [`jsonlite`](https://github.com/jeroenooms/jsonlite) package by [Jeroen Ooms](https://github.com/jeroenooms),
+- the [`lubridate`](https://github.com/hadley/lubridate) package by [Vitalie Spinu](https://github.com/vspinu) and [others](https://github.com/hadley/lubridate/graphs/contributors),
+- the [`rvest`](https://github.com/hadley/rvest) package by [Hadley Wickham](https://github.com/hadley)
 
 All packages can be installed from [CRAN](https://cran.r-project.org/).
 
@@ -81,10 +82,10 @@ attached base packages:
 [8] base     
 
 other attached packages:
- [1] jsonlite_0.9.19 rvest_0.3.1     xml2_0.1.2      ggplot2_2.0.0  
- [5] sna_2.3-2       network_1.13.0  rgexf_0.15.3    igraph_1.0.1   
- [9] Rook_1.1-1      XML_3.98-1.3    stringr_1.0.0   httr_1.0.0     
-[13] dplyr_0.4.3    
+ [1] lubridate_1.5.0 jsonlite_0.9.19 rvest_0.3.1     xml2_0.1.2     
+ [5] ggplot2_2.0.0   sna_2.3-2       network_1.13.0  rgexf_0.15.3   
+ [9] igraph_1.0.1    Rook_1.1-1      XML_3.98-1.3    stringr_1.0.0  
+[13] httr_1.0.0      dplyr_0.4.3    
 
 loaded via a namespace (and not attached):
  [1] Rcpp_0.12.2      magrittr_1.5     munsell_0.4.2    colorspace_1.2-6
