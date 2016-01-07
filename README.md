@@ -29,9 +29,9 @@ The data included in this repository are briefly presented in [this note](http:/
 
 The repository contains a [HOWTO](HOWTO.md) file with detailed instructions on how to get and run the code, and the `README` file of each country-specific repository contains further details on code execution and data collection, as well as additional thanks to people who provided help. Further ideas and links are available in the [repository wiki](https://github.com/briatte/parlnet/wiki).
 
-The raw data collected by [release 2.5](https://github.com/briatte/parlnet/releases) (December 2015) is available online as an archive of HTML, JSON and XML files. It can be accessed at the following DOI handle:
+The raw data collected by [release 2.6](https://github.com/briatte/parlnet/releases) (January 2016) is available online as an archive of HTML, JSON and XML files. It can be accessed at the following DOI handle:
 
-[![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.44217.svg)](http://dx.doi.org/10.5281/zenodo.44217)
+[![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.44440.svg)](http://dx.doi.org/10.5281/zenodo.44440)
 
 Please report bugs or suggestions as [issues](https://github.com/briatte/parlnet/issues), either in this repository if the issue affects all countries, or in the country-specific repository otherwise.
 
