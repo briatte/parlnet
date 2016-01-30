@@ -46,6 +46,10 @@ The code to produce [interactive visualizations](http://f.briatte.org/parlviz) o
 - Motion cosponsorships in both houses of the **Dutch Parliament**: [code](https://github.com/briatte/motie), [plots](http://f.briatte.org/parlviz/motie/plots.html)
 - Early day motion cosponsorships in the **U.K. House of Commons**: [code](https://github.com/briatte/edm), [plots](http://f.briatte.org/parlviz/edm/plots.html)
 
+# LICENSE
+
+This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
+
 # THANKS
 
 - [Baptiste Coulmont][coulmont] and [James Fowler][fowler] inspired this project
