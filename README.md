@@ -1,5 +1,15 @@
 This repository contains [R](http://www.r-project.org/) code to build and plot 150 cosponsorship networks out of the legislative activity of 27 parliamentary chambers in 19 European countries, plus Israel. The data cover approximately 558 years of parliamentary interactions. The resulting networks are stored in [`parlnet.rda`](https://github.com/briatte/parlnet/blob/master/parlnet.rda).
 
+# CITATION
+
+If you make use of the code or data made available through this repository, please cite the following paper:
+
+> [Briatte, François](http://f.briatte.org/). 2016. “Network Patterns of Legislative Collaboration in Twenty Parliaments.” _Network Science_, 4(2): 266–71. [doi:10.1017/nws.2015.31](https://doi.org/10.1017/nws.2015.31)
+
+The paper is available online [in preprint format](http://f.briatte.org/research/parlnet-note.pdf), as well as its [appendix](http://f.briatte.org/research/parlnet-appendix.pdf), which explains how the data were collected and how the networks were constructed.
+
+# DATA
+
 | Country / Chamber | | | |
 |:------------------------------------------|:----------------------------------------------:|:------------------------------------------------------------:|:-----------------------------------------------:|
 | **Austria** (lower/national chamber only) | [R code](https://github.com/briatte/nationalrat) | [static plots](http://f.briatte.org/parlviz/nationalrat/plots.html) | [interactive visualization](http://f.briatte.org/parlviz/nationalrat) |
@@ -24,8 +34,6 @@ This repository contains [R](http://www.r-project.org/) code to build and plot 1
 | **Switzerland** (both chambers)           | [R code](https://github.com/briatte/swparl)      | [static plots](http://f.briatte.org/parlviz/swparl/plots.html)      | [interactive visualization](http://f.briatte.org/parlviz/swparl)      |
 
 # DOCS
-
-The data included in this repository are briefly presented in [this note](http://f.briatte.org/research/parlnet-note.pdf) and are fully documented in [this appendix](http://f.briatte.org/research/parlnet-appendix.pdf), which explains how they were collected and how the networks were constructed.
 
 The repository contains a [HOWTO](HOWTO.md) file with detailed instructions on how to get and run the code, and the `README` file of each country-specific repository contains further details on code execution and data collection, as well as additional thanks to people who provided help. Further ideas and links are available in the [repository wiki](https://github.com/briatte/parlnet/wiki).
 
